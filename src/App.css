@@ -1,0 +1,1799 @@
+*
+{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Outfit',sans-serif;
+}
+body
+{
+    background-color: #ffffff;
+}
+/*Top Navigation Bar*/
+.doc-app-navbar
+{
+    display:flex;
+    align-items: center;
+    justify-content:left;
+    background-color:#494a80;
+    color:white;
+    padding:20px 0px;
+}
+.doc-app-navbar .row
+{
+    display:flex;
+    flex-wrap: nowrap;
+    column-gap: 20px;
+}
+.navbar-brand img
+{
+    width:30px;
+    height:30px;
+    margin-right: 12px;
+}
+.navbar-brand a
+{
+    font-size: 30px!important;
+    font-weight:bold;
+    color: white;
+    margin-right: 30px;
+    text-decoration: none;
+}
+.doc-app-navbar .navbar-nav a
+{
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+    margin: 0px 5px;
+    transition: 1s;
+}
+.doc-app-navbar .navbar-nav a:hover
+{
+    color:#b4b7c9;
+    text-decoration: underline;
+}
+.nav-menu
+{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-login
+{
+    width: 100px;
+    background-color: #494A80;
+    padding: 5px;
+    border:0.5px solid #9589b7;
+    border-radius: 50px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+.nav-login a
+{
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-login:hover
+{
+    background-color: #877ba6;
+    
+}
+.nav-login i 
+{
+    font-size: 12px;
+    margin: 5px;
+}
+/*Side Navigation bar*/
+.doc-app-side-navbar-button
+{
+    display:none; 
+    background-color: #494A80;
+    color:#b4b7c9;
+    border:none;
+    font-size: 30px;
+}
+@media screen and (max-width:991px)
+{
+    .doc-app-side-navbar-button{
+        display:block;
+        position:absolute;
+        left:0px;
+        top:0px;
+    }
+}
+.doc-app-side-navbar .nav-item a
+{
+
+    text-decoration: none;
+    color:#494A80;
+    font-size: 14px;
+    margin: 10px 0px 10px 10px;
+}
+.doc-app-side-navbar .nav-item a:hover
+{
+    color:#6e749a;
+    text-decoration: underline;
+}
+.doc-app-side-navbar .nav-item i
+{
+    font-size: 12px;
+    margin: 5px;
+}
+.offcanvas-start 
+{
+    width:280px;
+}
+.offcanvas-header
+{
+    background-color: #494A80;
+}
+.offcanvas-body
+{
+    background-color: #fafbff;
+}
+.btn-check:focus+.btn-primary, 
+.btn-primary:focus {
+    background-color: transparent;
+    color:#b4b7c9;
+    border:none;
+    box-shadow: none;
+    outline: none;
+}
+.btn-primary:hover {
+    color:#b4b7c9;
+    background-color:transparent;
+    border-color:transparent;
+}
+.btn-check:active+.btn-primary:focus, 
+.btn-check:checked+.btn-primary:focus, 
+.btn-primary.active:focus, 
+.btn-primary:active:focus, 
+.show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: none;
+}
+.user-avatar
+{
+    background-image: url('../public/user-avatar.png');
+    cursor:pointer;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: -250%;
+    margin-top: .125rem;
+}
+.dropdown i
+{
+    margin-right:10px;
+}
+.dropdown-item
+{
+    cursor:pointer;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 14px;
+    color:#494a80;
+}
+/*Home Page*/
+.home-container1 
+{
+    background-image: url("/public/Doctors-3.svg");
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    height: 450px;
+}
+.home-container2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.home-container2 h1
+{
+    font-weight: bolder;
+}
+.home-container3
+{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    background-color: #ebedf6;
+    
+}
+.home-container3 h3
+{
+    font-size:22px;
+    margin:20px 0px 20px;
+}
+.home-container3 .card
+{
+    width:250px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow:hidden;
+    padding-bottom: 20px;
+    transition: 1s;
+}
+.home-container3 .card:hover
+{
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.395);
+}
+
+.home-container3 .card h6
+{
+    font-size: 16px;
+    color:#494a80;
+    font-weight: bolder;
+    margin-bottom: 16px;
+}
+.home-container3 .card a
+{
+    text-decoration: underline;
+    color:#494a80;
+    cursor: pointer;
+}
+.home-container3 .card p
+{
+    font-size: 13px;
+    margin-bottom: 0px!important;
+    text-align: justify;
+}
+.home-container3 .card-img-top,.home-container3 .img-fluid
+{
+    width:240px;
+    height:200px;
+}
+/*Login Page and Reset & Save Password*/
+.login-section
+{
+    background-image: url(/public/login-bg.svg);
+    background-position-x: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.login-container,
+.save-reset-container
+{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding:5px;
+    margin: 0!important;
+}
+.docplus-login, 
+.docplus-reset-save
+{
+    width: 120px;
+    background-color: #494A80;
+    padding: 5px;
+    border:0.5px solid #9589b7;
+    border-radius: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    margin: 20px 20px 35px;
+    cursor:pointer;
+    color:white;
+    font-size: 14px;
+}
+.docplus-login a
+{
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.docplus-login:hover,
+.docplus-reset-save :hover
+{
+    background-color: #9589b7;
+}
+.docplus-login i, 
+.docplus-reset-save i
+{
+    font-size: 12px;
+    margin: 5px;
+}
+.login-section .form-control,
+.login-section .form-control:focus,
+.save-reset-section .form-control,
+.save-reset-section .form-control:focus
+{
+    border:0.25px #494A80 solid;
+    box-shadow: none;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 50px;
+    width:200px;
+    margin-bottom: 5px;
+}
+.login-section label, 
+.save-reset-section label
+{
+    font-size: 14px;
+}
+.register-now,
+.forgot-password,
+.verify-registration
+{
+    font-size: 12px;
+    margin:10px 5px;
+    font-style: italic;
+    color: #494A80;
+}
+.login-section .forgot-password a,
+.login-section .verify-registration a
+{
+    color: #0d6efd;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.visible-icon
+{
+    position: absolute;
+    top:20%;
+    right: 5%;
+    height:50px;
+    padding:5px;
+    color:rgba(128, 128, 128, 0.772);
+    cursor: pointer;
+}
+.modal-backdrop {
+    display: none;
+}
+.modal-dialog
+{
+    width:280px;
+    padding-bottom: 20px;
+    margin-top: 150px;
+}
+.modal-content
+{
+    border-top: none;
+}
+.reset-password-section a ,
+.resend-section a
+{
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    background-color: #494A80;
+    padding: 5px;
+    border:0.5px solid #9589b7;
+    border-radius: 12px !important;
+    transition: 1s;
+    cursor:pointer;
+}
+.reset-password-section a:hover,
+.resend-section a:hover
+{
+    background-color: #9589b7;
+}
+.modal-header
+{
+    border-bottom:none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    background-color: #494A80;
+    color:white;
+    font-weight:900;
+}
+.modal-header a
+{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+#resetEmail,#resendEmail
+{
+    border:1px solid #494A80;
+    border-radius: 5px;
+    transition: 1s;
+    width: 200px;
+    height:30px;
+    font-size: 13px;
+    padding:0px 10px;
+}
+#resetEmail:focus-visible,
+#resendEmail:focus-visible
+{
+    outline: 1.5px solid #494A80;
+}
+.reset-container .row, 
+.resend-container .row
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+.reset-container p,
+.resend-container p
+{
+    font-size: 13px;
+    width:200px;
+    color:#61567d;
+    font-weight: bold;
+
+}
+.save-reset-container p
+{
+    font-size: 14px;
+}
+.reset-container .reset-pwd-error-msg,
+.save-reset-container .reset-pwd-error-msg,
+.resend-container .resend-error-msg
+{
+    color: red;
+    height:20px;
+    font-size: 11px;
+}
+.reset-container .reset-pwd-success-msg,
+.save-reset-container .reset-pwd-success-msg,
+.resend-container .resend-success-msg
+{
+    color: green;
+    height:20px;
+    font-size: 11px;
+}
+.modal-body
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:0px;
+    background-image: url("/public/registration-message.gif");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y:150% ;
+}
+.login-err
+{
+    color:red;
+    font-size: 12px;
+    width:250px;
+    height:30px;
+    margin-bottom: 0px!important;
+    text-align:center ;
+}
+.save-reset-container h6
+{
+    color:#494a80;
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.save-reset-section
+{
+    background-image: url(/public/reset-password-bg.svg);
+    background-position-x: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.save-reset-container .form-floating
+{
+    height: 50px;
+}
+/*Register Page*/
+.register-section
+{
+    background-image: url('../public/register-bg.svg')!important;
+    background-position-x: 58%;
+    background-size: contain;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.register-container
+{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding:5px;
+    margin: 0!important;
+}
+.register-container .row
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.docplus-register
+{
+    width: 120px;
+    background-color: #494A80;
+    padding: 5px;
+    border:0.5px solid #9589b7;
+    border-radius: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    margin: 5px 20px 0px;
+    cursor:pointer;
+    color:white;
+    font-size: 14px;
+    text-decoration: none;
+}
+.docplus-register a
+{
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.docplus-register:hover
+{
+    background-color: #9589b7;
+}
+.docplus-register i
+{
+    font-size: 12px;
+    margin: 5px;
+}
+.MuiInput-underline:after {
+    border-bottom: none!important;
+}
+.MuiInput-underline:before {
+    border-bottom: none!important;
+}
+.login-now
+{
+    font-size: 14px;
+    margin:10px 5px;
+    font-style: bold;
+    color: #494A80;
+}
+.login-now a
+{
+    color: #0d6efd;
+    text-decoration:underline;
+    cursor: pointer;
+}
+.register-container p
+{
+    font-size: 11px;
+    padding:0px;
+    margin:0px 0px 10px;
+    width:max-content;
+}
+.MuiFormLabel-root {
+    font-size: 13px!important;
+    padding: 5px!important;
+    background-color: #ffffff;
+}
+.MuiFormLabel-root.Mui-error {
+    color: #494A80!important;
+}
+.MuiInputLabel-root
+{
+    margin-left: 10px!important;
+    top: -15px !important;
+}
+.MuiInputLabel-shrink {
+    transform: translate(0,5px) scale(0.75)!important;
+    transform-origin: top left;
+}
+.MuiFormControl-root
+{
+    border:0.50px #494A80 solid!important;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 13px;
+    height: 50px;
+    width:250px;
+    margin-bottom: 5px;
+}
+.MuiInputBase-input
+{
+    padding: 6px 10px!important;
+}
+.registration-error-msg
+{
+    color: red;
+    height:20px;
+}
+.registration-message-container p
+{
+    color: #494A80;
+    height:50px;
+    font-weight: bold;
+    text-align: center;
+}
+.reg-err{
+    color:red;
+    font-weight: bold;
+    background-color:#ffffff;
+    padding: 0px 10px;
+}
+.registration-message-container
+{
+    background:url("/public/registration-message.gif");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+/*Doctor List Page*/
+.doctor-list-section .accordion
+{
+    width:250px;
+}
+.doctor-list-section .filter-col
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+}
+
+.doctor-list-section .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    box-shadow: none;
+    color:#494a80;
+    border-bottom:0.5px solid gainsboro;
+}
+.doctor-list-section .accordion-button .collapsed
+{
+    background-color: transparent;
+    box-shadow: none;
+    color:#494a80;
+    border-bottom:0.5px solid gainsboro;
+}
+.doctor-list-section .accordion-button:focus {
+    z-index: 3;
+    color:#494A80;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: none;
+    border-bottom:0.5px solid gainsboro;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("/public/up-arrow.svg");
+    transform: rotate(0deg);
+}
+.doctor-list-section .accordion-item{
+    border-top-left-radius: 0px;
+    border-top-right-radius:0px;
+}
+.doctor-list-section .accordion-body .filter-input
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    font-size: 14px;
+}
+.doctor-list-section .accordion-body .filter-input input
+{
+    margin-right:20px!important;
+}
+.doctor-list-section .filter-heading,
+.doctor-list-section .filter-footer
+{
+    border:1px solid gainsboro;
+    font-size: 16px;
+    background-color:#494a80;
+    flex-direction: row;
+    color:snow;
+    align-items: center;
+    justify-content:center;
+    column-gap: 10px;
+    text-align: center;
+    width:250px;
+}
+.doctor-list-section .filter
+{
+    font-size: 16px;
+    cursor: pointer;
+    color:snow;
+}
+.doctor-list-section .filter:hover
+{
+    color:white;
+}
+.view-doctordetail 
+{
+    width: 100px;
+    background-color: #494A80;
+    padding: 5px;
+    border:0.5px solid #9589b7;
+    border-radius: 12px !important;
+    transition: 1s;
+    margin: 5px 20px 0px;
+    cursor:pointer;
+    color: white !important;
+    font-size: 12px;
+    text-decoration: none;
+}
+.view-doctor i
+{
+    font-size: 12px;
+    margin: 5px;
+}
+.doctor-list-section li
+{
+    list-style: none;
+    margin-bottom: 40px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.doctor-list-section .card{
+   width:250px;
+    height:300px;
+    border:1px solid#494A80;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.1s;
+    outline: none;
+    color:black;
+}
+.doctor-list-section .card:hover{
+   outline:1.5px solid#494A80;
+}
+.doctor-list-container .card-img-top
+{
+    height: 220px;
+    width: 100%;
+    overflow: hidden;
+}
+.doctor-list-container .img-fluid
+{
+    height: 220px;
+    width:100%;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.doctor-list-container .card:hover .img-fluid
+{
+    transform: scale(1.1);
+}
+.doctor-list-section .card-body
+{
+    width:250px; 
+    text-align:center;
+}
+.doctor-list-section .card-body h5
+{
+    color:black;
+    font-size: 18px;
+}
+.doctor-list-section .card-text
+{
+    color:rgb(94, 94, 94);
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.doctor-list-container ul
+{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+/* Doctors-List Pagination */
+.doc-pagination
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    font-size: 11px;
+}
+/*Doctors-List Searchbar*/
+.doc-search-div
+{
+    width:270px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    position: relative;
+}
+.doc-search-div a
+{
+    cursor: pointer;
+    text-decoration: none;
+}
+.searching
+{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.fa-magnifying-glass
+{
+    position: absolute;
+    right:10%;
+    cursor: pointer;
+}
+#doc-searchbar{
+    width:270px;
+    height:30px;
+    border: 1px solid #494A80;
+    font-size: 14px;
+    padding-left: 10px;
+}
+#doc-searchbar:focus
+{
+    outline:none;
+}
+/*Doctor-Detail Page*/
+.doctor-detail-section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doctor-detail-container .slot-error-msg
+{
+    font-size: 11px;
+    color:red;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doctor-detail-container .date-slot
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doctor-detail-container .book-col .card-header
+{
+    background-color: #494a80;
+    color:snow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doctor-detail-container .book-col .card-footer
+{
+    border:none;
+    background-color: #ffffff;
+}
+.date-slot input
+{
+    width:80%;
+    border: 1px solid #494A80;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+.doctor-detail-container .book-col label
+{
+    margin-left: 5px;
+}
+.doctor-detail-container .book-col button
+{
+    width:100px;
+    padding: 5px;
+    background-color: #494A80;
+    color:snow;
+    border:none;
+    border-radius: 12px;
+    font-size: 13px;
+}
+.sign-to-book h4
+{
+    font-size: 20px;
+    text-align: center;
+    line-height: 2;
+}
+.doctor-detail-container .doc-col
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #494A80;
+    border-radius: 8px;
+}
+.doctor-detail-container .doc-col .img-fluid
+{
+    width:200px;
+    height:200px;
+    border-radius: 8px;
+}
+.doctor-detail-container .doc-col .doc-img
+{
+    background-color: #494A80;
+    height: 70%;
+    border-radius: 8px;
+   
+}
+.doctor-detail-container .doc-desc
+{
+    color:#494A80;
+    font-size: 14px;
+}
+/*Appointment Form*/
+.appointment-section
+{
+    background-image: url('/public/Online\ calendar-pana.svg');
+    background-position-x: 30%;
+    background-size: contain;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color:#494a80;
+}
+.appointment-section .row
+{
+    width:100%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+.appointment-section .row .col
+{
+    width:200px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.appointment-section .form-control,
+.appointment-section .form-control:focus
+{
+    border:0.25px #494A80 solid;
+    box-shadow: none;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 50px;
+    width:200px;
+    margin-bottom: 5px;
+}
+.appointment-section label
+{
+    font-size: 14px;
+}
+.appointment-section .app-err
+{
+    font-size: 11px;
+    color:red;
+    text-align: center;
+}
+.appointment-section .gender-input,
+.appointment-section .gender-input1
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.confirm-pay
+{
+    width: 120px;
+    background-color: #494A80;
+    padding: 5px;
+    border:0.5px solid #9589b7;
+    border-radius: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    margin: 5px 20px 0px;
+    cursor:pointer;
+    color:white;
+    font-size: 14px;
+    text-decoration: none;
+}
+.confirm-pay:hover
+{
+    background-color: #9589b7;
+    color:white;
+}
+/*Payment Message*/
+.payment-message-success
+{
+    background-image: url("../public/Payment-Success.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    overflow: hidden;
+    width:100%;
+    height:50vh;
+    background-position: center;
+}
+.payment-message-failure
+{
+    background-image: url("../public/Payment-Failure.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    overflow: hidden;
+    width:100%;
+    height:50vh;
+    background-position: center;
+}
+/*Admin Dashboard*/
+.admin-panel-section
+{
+    background-color: #1a1a1a;
+}
+.admin-panel-section .canvasjs-chart-toolbar button,
+.admin-panel-section .canvasjs-chart-credit
+{
+    display: none !important;
+}
+.admin-panel-section .canvasjs-chart-canvas
+{
+    border-radius: 12px;
+}
+.admin-panel-section .nav-pills
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.view-user,.edit-user,.delete-user,
+.view-doctor,.edit-doctor,.delete-doctor,
+.view-appointment,.edit-appointment,.delete-appointment
+{
+    border-radius: 4px;
+    width:25px;
+    height:25px;
+    font-size: 12px;
+    border:none;
+    color:white;
+    background-color: #090a0c;
+}
+.admin-panel-section .nav-pills .nav-link.active, .nav-pills .show>.nav-link 
+{
+    color: snow;
+    background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) -100%, rgb(63, 61, 61) 78.9%);
+}
+.admin-panel-section .nav-link {
+    color: snow;
+    text-decoration: underline;
+    border-radius: 0px;
+    width:180px;
+    background-color: black;
+}
+.css-194a1fa-MuiSelect-select-MuiInputBase-input.MuiSelect-select 
+{
+    padding:0;
+}
+.css-pdct74-MuiTablePagination-selectLabel,
+.css-levciy-MuiTablePagination-displayedRows 
+{
+    margin-bottom: 0px!important;
+}
+.css-16c50h-MuiInputBase-root-MuiTablePagination-select
+{
+   padding:0px!important;
+   margin: 0px 4px!important;
+}
+.MuiTablePaginationInput
+{
+    padding: 0px !important;
+}
+.css-194a1fa-MuiSelect-select-MuiInputBase-input.css-194a1fa-MuiSelect-select-MuiInputBase-input.css-194a1fa-MuiSelect-select-MuiInputBase-input 
+{
+    min-width: max-content;
+    width: max-content;
+}
+/*Admin Panel- User Doctor Appointment Modal*/
+.admin-panel-users .card,
+.admin-panel-doctors .card,
+.admin-panel-appointments .card
+{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 8px;
+    font-size: 14px;
+    text-align: left;
+    /*background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);*/
+    background: rgb(41, 39, 39);
+    border:none;
+}
+.admin-panel-users .card-img-top,
+.admin-panel-doctors .card-img-top,
+.admin-panel-appointments .card-img-top
+{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    border:2px solid rgb(70, 70, 70);
+}
+.admin-panel-users .view-profile p,
+.admin-panel-doctors .view-profile p,
+.admin-panel-appointments .view-profile p
+{
+    margin:8px 16px;
+    font-size: 16px;
+    font-weight: normal;
+    color: snow;
+}
+.admin-panel-users .view-profile p span,
+.admin-panel-doctors .view-profile p span,
+.admin-panel-appointments .view-profile p span
+{
+    color:rgb(143, 143, 143);
+    font-weight: 100;
+}
+.modal-backdrop {
+    display: block;
+}
+.admin-panel-users .modal-dialog,
+.admin-panel-doctors .modal-dialog,
+.admin-panel-appointments .modal-dialog
+{
+    width:90%;
+    padding-bottom: 16px;
+    margin-top: 100px;
+}
+.admin-panel-users .modal-body,
+.admin-panel-doctors .modal-body,
+.admin-panel-appointments .modal-body
+{
+    /*background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);*/
+    background:rgb(41, 39, 39);
+    color:snow;
+}
+.admin-panel-users .modal-header,
+.admin-panel-doctors .modal-header,
+.admin-panel-appointments .modal-header
+{
+    background-color: black;
+}
+/*CRUD-Update User,Doctor,Appointment*/
+.edit-user-section .form-control,
+.edit-user-section .form-control:focus,
+.edit-doctor-section .form-control,
+.edit-doctor-section .form-control:focus
+.edit-profile-section .form-control,
+.edit-profile-section .form-control:focus
+{
+    border:0.25px black solid;
+    box-shadow: none;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 50px;
+    width:250px;
+    margin-bottom: 5px;
+}
+.edit-user-section label,
+.edit-doctor-section label
+{
+    font-size: 14px;
+    margin-left: 8px;
+    color:black;
+}
+.edit-user-section .app-err,
+.edit-doctor-section .app-err,
+.edit-profile-section .app-err
+{
+    font-size: 11px;
+    color:red;
+    text-align: center;
+}
+.edit-user-section .visible-icon,
+.edit-doctor-section .visible-icon
+{
+    right: 10%;
+}
+.edit-user-section .form-floating,
+.edit-doctor-section .form-floating,
+.edit-profile-section .form-floating
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit-user-section .form-floating>label 
+.edit-doctor-section .form-floating>label,
+.edit-profile-section .form-floating>label
+{
+    position: absolute;
+    top: 0;
+    left: 0%;
+}
+.update-user,.del-user,.add-user a,
+.update-doctor,.del-doctor,.add-doctor a,
+.update-appointment
+{
+    width: 100px;
+    background-color:black;
+    padding: 5px;
+    color:snow;
+    border-radius: 50px !important;
+    text-align: center;
+    transition: 1s;
+    cursor:pointer;
+    text-decoration: none;
+}
+.update-user:hover,.del-user:hover,.add-user a:hover,
+.update-doctor:hover,.del-doctor:hover,.add-doctor a:hover,
+.update-appointment:hover
+{
+    background-color: rgb(56, 56, 56);
+    color:snow;
+}
+.update-div
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-container
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.dashboard-container .col
+{
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+    color:snow;
+    margin: 16px;
+    padding:16px 8px;
+    border-radius: 12px;
+    width:280px;
+}
+.dashboard-container .col .div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.add-user,.add-doctor
+{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding:16px;
+    text-align: center;
+}
+.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon 
+{
+    color:snow;
+}
+.css-16c50h-MuiInputBase-root-MuiTablePagination-select .MuiTablePagination-select {
+  z-index: 99;
+}
+
+.edit-doctor-section .form-floating>.form-control:focus, .form-floating>.form-control:not(:placeholder-shown) {
+    padding-top: 24px;
+    padding-bottom: 5px;
+}
+
+/*User Profile Edit*/
+.edit-my-profile-section
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    background-image: url("../public/Enthusiastic-rafiki.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: left;
+}
+.edit-my-profile-section .profile-picture
+{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    border:1px solid gainsboro;
+    background-color: #494A80;
+}
+.edit-my-profile-section h1
+{
+    font-size: 25px;
+    color: #494a80;
+    margin-bottom: 20px;
+}
+
+.edit-my-profile-section .profile-detail p 
+{
+    color:#494A80;
+    font-weight: bold;
+}
+.edit-my-profile-section .profile-detail p span
+{
+    color:#6e749a;
+    font-weight: lighter;
+}
+.edit-my-profile-section .edit-profile{
+    text-decoration: none;
+    color:white;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    background-color: #494A80;
+    padding: 5px;
+    border:0.5px solid #9589b7;
+    border-radius: 12px !important;
+    transition: 1s;
+    cursor:pointer;
+}
+.edit-my-profile-section .edit-profile:hover
+{
+    background-color: #9589b7;
+}
+.edit-my-profile-section .modal-dialog
+{
+    width:90%;
+    padding-bottom: 16px;
+    margin-top: 100px;
+}
+.edit-my-profile-section input
+{
+    width:250px;
+    font-size: 14px;
+    height: 50px;
+}
+.edit-my-profile-section .change-pwd
+{
+    color:#494A80;
+    font-size: 12px;
+    cursor: pointer;
+}
+.edit-my-profile-section .form-control,
+.edit-my-profile-section .form-control:focus
+{
+    border:0.25px #494A80 solid;
+    box-shadow: none;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 50px;
+    width:250px;
+    margin-bottom: 5px;
+}
+.edit-my-profile-section label
+{
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.edit-my-profile-section .app-err
+{
+    font-size: 11px;
+    color:red;
+    text-align: center;
+}
+.edit-my-profile-section .form-floating
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit-my-profile-section .form-floating>label
+{
+    position: absolute;
+    top: 0;
+    left: 0%;
+}
+.edit-my-profile-section .modal-body
+{
+    background-image: url("../public/Data\ analysis.gif");
+}
+/*My Activity Section*/
+.my-activity-section
+{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    color: #494A80;
+}
+.my-activity-section h1
+{
+    font-size:25px;
+}
+.no-activity
+{
+    height: 70vh;
+    text-align: center; 
+    background-image: url("/public/forgot-bg.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    color: #494A80;
+}
+.no-activity h1
+{
+    font-size: 30px;
+}
+
+
+/*Footer Section*/
+.doc-app-footer
+{
+    background-color: #494A80;
+    padding:40px 10px 20px;
+    overflow: auto;
+    color:white;
+    font-size: 16px;
+}
+.doc-app-footer img
+{
+    width:60px;
+    margin-right: 12px;
+}
+.doc-app-footer a
+{
+    text-decoration: none;
+    color:whitesmoke;
+    font-size: 14px;
+    transition:all 1s;
+}
+.doc-app-footer a:hover
+{
+    color:#b4b7c9;
+    text-decoration: underline;
+}
+.doc-app-footer ul
+{
+  list-style: none;
+  padding: 0!important;
+}
+.doc-app-footer li
+{
+    margin:0 0 10px!important;
+}
+.doc-app-footer h5
+{
+    font-size: 24px;
+    color:whitesmoke;
+    font-weight: bold;
+}
+.doc-app-footer h6
+{
+    font-size: 18px;
+    color:whitesmoke;
+    font-weight: bold;
+    margin-bottom: 10px!important;
+}
+.doc-app-footer .col-2 div 
+{
+    font-size: 14px!important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doc-app-footer .contact-col li
+{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:left;
+    font-size: 14px;
+}
+.doc-app-footer .contact-col p
+{
+    margin-bottom:0px!important;
+    margin-left:10px;
+}
+.doc-app-footer .footer-brand:hover
+{
+ text-decoration: none;
+}
+@keyframes bulb {
+    from {transform:scale(0.8);}
+    to {transform:scale(1);}
+  }
+.doc-app-footer .fixed-facts-icon
+{
+    width:50px;
+    height:50px;
+    position: fixed;
+    bottom:0.5%;
+    padding:1px;
+    background-color: #494A80;
+    border-radius: 8%;
+}
+.doc-app-footer .fixed-facts-icon img
+{
+    animation-name:bulb;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+.fact-container .modal-dialog
+{
+    width:90%;
+    height: 100vh;
+}
+.fact-container .modal-body
+{
+    width:100%;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.fact-container .modal-footer
+{
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fact-container .modal-footer button
+{
+    font-size: 14px;
+    width:80px;
+    height:30px;
+    background-color: #494A80;
+    color:snow;
+    border: none;
+    border-radius: 12px;
+}
+.fact-box
+{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.fact-txt
+{
+    color:#494A80;
+    /*font-family:"Comic Sans MS", sans-serif;*/
+    font-size: 16px;
+    text-align: center;
+    margin-top: 150px;
+    height:200px;
+
+}
+.fact-box img
+{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:5%;
+    left:30%;
+    z-index: 99;
+}
+.fact-container .modal-footer span 
+{
+    font-size: 10px;
+    color: grey;
+    position: absolute;
+    bottom:0;
+}
+/*Fixed Arrow*/
+.fixed_arrow{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    border-radius: 25%;
+    width:30px;
+    height:30px;
+    color:white;
+    border:1px solid white;
+    background-color: #494A80;
+    align-items:center;
+    justify-content: center;
+    z-index:5;
+    transition: 0.5s;
+    cursor:pointer;
+}
+.fixed_arrow:hover
+{
+   background-color: #877ba6;
+}
+.fixed_arrow ion-icon
+{
+    font-size:20px;
+    font-weight: bolder;
+    color: white;
+}
+.arrow
+{
+    text-decoration: none;
+    color:white;
+}
+/*Error 404 Component*/
+.error-404
+{
+    background-image: url("../public/404\ Error\ with\ a\ cute\ animal.gif");
+    background-repeat: no-repeat;
+    background-size:contain;
+    overflow: hidden;
+    width:100%;
+    height:100vh;
+    background-position: center;
+}
+/*About*/
+.about-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.about-container ul
+{
+    list-style: none;
+}
+.about-container li
+{
+    margin: 0px 0px 30px;
+}
+.about-container h4
+{
+    font-weight: bold;
+    color: #494A80;
+    font-size: 18px;
+}
+.about-container h6
+{
+    font-weight: bold;
+    color: #494A80;
+    font-size: 14px;
+}
+.about-container a
+{
+    font-size: 16px;
+}
+/*Contact*/
+.contact-section 
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../public/contatctus.svg");
+    background-position-x: 20%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.contact-section h3
+{
+    color:#494A80;
+}
+.contact-section .form-control,
+.contact-section .form-control:focus
+{
+    border:0.25px #494A80 solid;
+    box-shadow: none;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 50px;
+    width:250px;
+    margin-bottom: 5px;
+}
+.contact-section label
+{
+    font-size: 14px;
+}
+.contact-section .app-err
+{
+    font-size: 11px;
+    color:red;
+    text-align: center;
+}
+.send-msg
+{
+    width: 120px;
+    background-color: #494A80;
+    padding: 5px;
+    border:0.5px solid #9589b7;
+    border-radius: 12px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    margin: 5px 20px 0px;
+    cursor:pointer;
+    color:white;
+    font-size: 14px;
+    text-decoration: none;
+}
+.send-msg:hover
+{
+    background-color: #9589b7;
+    color:white;
+}
+/*Message List Dashboard*/
+.message-dashboard
+{
+    color:snow;
+}
+.message-dashboard ul
+{
+    list-style:none;
+}
+.message-dashboard  li
+{
+    background-color: #292727;
+    padding:16px 16px;
+    margin:8px;
+    position: relative;
+    border-radius: 12px;
+    font-size: 14px;
+}
+.message-dashboard  li span{
+    color:#b0b0b0;
+}
+.msg-time{
+    position: absolute;
+    right:2%;
+    top:2%;
+    font-size: 10px;
+}
+.msg-pagination li
+{
+    background-color: transparent;
+}
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    background: rgb(0, 0, 0);
+}
+.css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    color: black;
+}
+.message-dashboard .css-yuzg60-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    color:snow;
+    background-color: #292727!important;
+}

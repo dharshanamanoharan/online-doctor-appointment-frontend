@@ -1,0 +1,47 @@
+{
+    "firstName":"",
+    "lastName":"",
+    "email":"",
+    "userName":"",
+    "password":"",
+    "gender":"",
+    "specialization":"",
+    "description":"",
+    "image":"",
+    "address":"",
+    "location":"",
+    "availability":"",
+    "phoneNumber":""
+}
+
+{
+    "firstName":"Dakshin",
+    "lastName":"Prakash",
+    "email":"dakshinprakash@gmail.com",
+    "userName":"dakshinprakash",
+    "password":"123",
+    "gender":"male",
+    "specialization":"psychologist",
+    "description":"",
+    "image":"https://img.freepik.com/free-photo/smiling-doctor-with-strethoscope-isolated-grey_651396-974.jpg?size=626&ext=jpg",
+    "address":"",
+    "location":"borivali",
+    "availability":"available",
+    "phoneNumber":"9876543210"
+}
+
+{
+    "firstName":"Meenakshi",
+    "lastName":"Prakash",
+    "email":"meenakshiprakash@gmail.com",
+    "userName":"meenakshiprakash",
+    "password":"123",
+    "gender":"female",
+    "specialization":"cardiologist",
+    "description":"",
+    "image":"https://img.freepik.com/free-photo/woman-doctor-wearing-lab-coat-with-stethoscope-isolated_1303-29791.jpg?w=740&t=st=1713345092~exp=1713345692~hmac=17935de46125eead88e42be0ce0be3fd1bcc28164192d903d7c5ae7b2e456bc0",
+    "address":"",
+    "location":"dadar",
+    "availability":"available",
+    "phoneNumber":"9876543210"
+}
