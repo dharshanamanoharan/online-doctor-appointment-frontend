@@ -72,16 +72,16 @@ const DoctorListTable=()=>{
       
     //Creating columns of the table
     const columns = [
-        {label: 'Doctor ID',id:"doctorID"},
-        {label: 'First Name',id:"firstName"},
-        {label: 'Last Name',id:"lastName"},
-        {label: 'Email ID',id:"email"},
+        {label: 'Doctor_ID',id:"doctorID"},
+        {label: 'First_Name',id:"firstName"},
+        {label: 'Last_Name',id:"lastName"},
+        {label: 'Email_ID',id:"email"},
         {label: 'Gender',id:"gender"},
         {label: 'Specialization',id:"specialization"},
        /* {label: 'Description',id:"description"},*/
         {label: 'Address',id:"address"},
         {label: 'Location',id:"location"},
-        {label: 'Phone Number',id:"phoneNumber"},
+        {label: 'Phone_Number',id:"phoneNumber"},
         {label: 'Availability',id:"availability"},
        /* {label: 'Image',id:"image"},*/
         {label: 'Fees',id:"fees"}

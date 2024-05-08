@@ -202,11 +202,11 @@ const UserListTable=()=>{
       
     //Creating columns of the table
     const columns = [
-        {label: 'User ID',id:"userID"},
-        {label: 'First Name',id:"firstName"},
-        {label: 'Last Name',id:"lastName"},
-        {label: 'User Name',id:"userName"},
-        {label: 'Email ID',id:"email"},
+        {label: 'User_ID',id:"userID"},
+        {label: 'First_Name',id:"firstName"},
+        {label: 'Last_Name',id:"lastName"},
+        {label: 'User_Name',id:"userName"},
+        {label: 'Email_ID',id:"email"},
         {label: 'Role',id:"role"},
         {label: 'Verified',id:"enabled"},
     ];
