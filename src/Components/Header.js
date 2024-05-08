@@ -125,19 +125,19 @@ const Header=()=>{
                         </>
                         :<>
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page"><Link to="/docplus.in/admin-panel"><i class="me-1 fa-solid fa-chart-line"/>Dashboard</Link></a>
+                            <a className="nav-link active" aria-current="page"><Link to="/docplus.in/admin-panel"><i className="me-1 fa-solid fa-chart-line"/>Dashboard</Link></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link"><Link to="/docplus.in/admin-panel/users"><i class="me-1 fa-regular fa-user"/>Users</Link></a>
+                            <a className="nav-link"><Link to="/docplus.in/admin-panel/users"><i className="me-1 fa-regular fa-user"/>Users</Link></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link"><Link to="/docplus.in/admin-panel/doctors"><i class="me-1 fa-solid fa-doctor"/>Doctors</Link></a>
+                            <a className="nav-link"><Link to="/docplus.in/admin-panel/doctors"><i className="me-1 fa-solid fa-doctor"/>Doctors</Link></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link"><Link to="/docplus.in/admin-panel/appointments"><i class="me-1 fa-regular fa-calendar-check"/>Appointments</Link></a>
+                            <a className="nav-link"><Link to="/docplus.in/admin-panel/appointments"><i className="me-1 fa-regular fa-calendar-check"/>Appointments</Link></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link"><Link to="/docplus.in/admin-panel/messages"><i class="me-1 fa-regular fa-envelope"/>Messages</Link></a>
+                            <a className="nav-link"><Link to="/docplus.in/admin-panel/messages"><i className="me-1 fa-regular fa-envelope"/>Messages</Link></a>
                         </li>
                         </>}
                 {(!isAuth)&&<>

@@ -12,11 +12,22 @@ const DoctorDetail=()=>{
         const isAuth=isUserLoggedIn();
         const doctorId1=useParams();
        // console.log("Param in Doctor Detail Page",doctorId1);
-        const [doctorInfo,setDoctorInfo]=useState([]);
+        const [doctorInfo,setDoctorInfo]=useState([
+            {
+                firstName:"",
+                firstName:"",
+                image:"",
+                specialization:"",
+                description:"",
+                email:"",
+                location:"",
+                address:"",
+                phoneNumber:""
+            }]);
         const getDoctor=async()=>{
         try{
             const res=await axios.get(`http://localhost:8080/docplus.in/doctor/${doctorId1.doctorId}`);
-            setDoctorInfo([res?.data]);
+            setDoctorInfo([res.data]);
         }
         catch(error)
         {
@@ -138,32 +149,30 @@ const DoctorDetail=()=>{
        //console.log("Booking Date:",bookDate);
     }
     
-
     return(
         <>
             <section className="doctor-detail-section container-fluid py-5 px-1" style={{minHeight:"70vh"}}>
                 <div className="container doctor-detail-container">
                     <div className="row">
                         {/*Doctor Details*/}
-                        <div className="col-lg-8 col-12 doc-col">
-                       {doctorInfo && doctorInfo.map((doctor)=>
+                        <div className="col-lg-8 col-12 doc-col">         
                         <>
                             <div className="row doc-img py-3 m-1">
-                                <img  src={doctor.image} style={{width:"200px",height:"200px"}} />
+                                <img  src={doctorInfo[0].image} style={{width:"200px",height:"200px"}}/>
                             </div>
                             <div className="row">
                                 <div className="card-body doc-desc ms-3">
-                                <h3>Dr.{doctor.firstName} {doctor.lastName}</h3>
-                                <p style={{color:"gray"}}><i className="me-2 fa fa-stethoscope"></i>{doctor.specialization}</p>
-                                <p><i className="me-2 fa-solid fa-book-open"></i>{doctor.description}</p>
+                                <h3>Dr.{doctorInfo[0].firstName} {doctorInfo[0].lastName}</h3>
+                                <p style={{color:"gray"}}><i className="me-2 fa fa-stethoscope"></i>{doctorInfo[0].specialization}</p>
+                                <p><i className="me-2 fa-solid fa-book-open"></i>{doctorInfo[0].description}</p>
                                 <div className="row doc-detail-address">
-                                    <p><i className="me-2 fa fa-map-marker"></i>{doctor.address},{doctor.location}</p>
-                                    <p><i className="me-2 fa-solid fa-phone"/>{doctor.phoneNumber}</p>
-                                    <p><i className="me-2 fa-solid fa-envelope"/>{doctor.email}</p>
+                                    <p><i className="me-2 fa fa-map-marker"></i>{doctorInfo[0].address},{doctorInfo.location}</p>
+                                    <p><i className="me-2 fa-solid fa-phone"/>{doctorInfo[0].phoneNumber}</p>
+                                    <p><i className="me-2 fa-solid fa-envelope"/>{doctorInfo[0].email}</p>
                                 </div>
                             </div>
                             </div>
-                            </>)}
+                            </>
                         </div>
                        {/*Book Now- Just Selecting date,time and option*/}
                        {(isAuth)?
