@@ -446,14 +446,14 @@ const DoctorListTable=()=>{
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="float1"  value={firstName} onChange={(e)=>setFirstName(e.target.value)}/>
-                                    <label for="float1">FirstName</label>
+                                    <label htmlFor="float1">FirstName</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err1}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="float2" value={lastName}  onChange={(e)=>setLastName(e.target.value)} />
-                                    <label for="float2">LastName</label>
+                                    <label htmlFor="float2">LastName</label>
                                 </div>
                             </div>
                             <p className="row app-err">{err2}</p>
@@ -461,18 +461,18 @@ const DoctorListTable=()=>{
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="email" className="form-control" id="float3" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-                                    <label for="float3">Email</label>
+                                    <label htmlFor="float3">Email</label>
                                 </div>
                             </div>
                             <p className="row app-err">{err3}</p>
                             <div className="row">
                                 <div className="d-flex flex-row align-center">
                                     <input type="radio" className='ms-3' checked={(gender.toLowerCase()==="male")?true:false} name="gender" id="male-gender" value="male" onChange={(e)=>setGender(e.target.value)}/>
-                                    <label style={{color:"snow"}} for="male-gender">Male</label>
+                                    <label style={{color:"snow"}} htmlFor="male-gender">Male</label>
                                     <input type="radio" className='ms-3' name="gender" checked={(gender.toLowerCase()==="female")?true:false} id="female-gender" value="female" onChange={(e)=>setGender(e.target.value)}/>
-                                    <label style={{color:"snow"}} for="female-gender">Female</label>
+                                    <label style={{color:"snow"}} htmlFor="female-gender">Female</label>
                                     <input type="radio" className='ms-3' name="gender" checked={(gender.toLowerCase()==="other")?true:false} id="other-gender" value="other" onChange={(e)=>setGender(e.target.value)}/>
-                                    <label style={{color:"snow"}}for="other-gender">Other</label>
+                                    <label style={{color:"snow"}} htmlFor="other-gender">Other</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err4}</p>
@@ -494,35 +494,35 @@ const DoctorListTable=()=>{
                                     <option value="Nephrologist">Nephrologist</option>
                                     <option value="Podiatrist">Podiatrist</option>
                                 </select>
-                                <label for="float4">Specialization</label>
+                                <label htmlFor="float4">Specialization</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err5}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="float5" value={description} onChange={(e)=>setDescription(e.target.value)}/>
-                                    <label for="float5">Description</label>
+                                    <label htmlFor="float5">Description</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err6}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="float6" value={address} onChange={(e)=>setAddress(e.target.value)}/>
-                                    <label for="float6">Address</label>
+                                    <label htmlFor="float6">Address</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err7}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="float7" value={location}  onChange={(e)=>setLocation(e.target.value)}/>
-                                    <label for="float7">Location</label>
+                                    <label htmlFor="float7">Location</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err8}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="float8" value={phoneNumber}  onChange={(e)=>setPhoneNumber(e.target.value)}/>
-                                    <label for="float8">Phone Number</label>
+                                    <label htmlFor="float8">Phone Number</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err9}</p>
@@ -533,21 +533,21 @@ const DoctorListTable=()=>{
                                         <option value="available">Available</option>
                                         <option value="unavailable">Unavailable</option>
                                         </select>
-                                        <label for="float9">Availability</label>
+                                        <label htmlFor="float9">Availability</label>
                                     </div>
                                 </div>
                                 <p className="app-err row">{err10}</p>
                                 <div className="row">
                                     <div className="form-floating">
                                         <input type="file" className="form-control" id="float10" onChange={(e)=>{var a=(e.target.value);setImage(a.replace("C:\\fakepath\\", "../"));}}/>
-                                        <label for="float10">Avatar</label>
+                                        <label htmlFor="float10">Avatar</label>
                                     </div>
                                 </div>
                                 <p className="app-err row">{err11}</p>
                                 <div className="row">
                                     <div className="form-floating">
                                         <input type="number" className="form-control" id="float11" value={fees}  onChange={(e)=>setFees(e.target.value)}/>
-                                        <label for="float11">Fees</label>
+                                        <label htmlFor="float11">Fees</label>
                                     </div>
                                 </div>
                                 <p className="app-err row">{err12}</p>
@@ -593,32 +593,32 @@ const DoctorListTable=()=>{
                              <div className="row">
                                  <div className="form-floating">
                                     <input type="text" className="form-control" id="floating1"  onChange={(e)=>setFirstName(e.target.value)}/>
-                                    <label for="floating1">FirstName</label>
+                                    <label htmlFor="floating1">FirstName</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err1}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="floating2"  onChange={(e)=>setLastName(e.target.value)}/>
-                                    <label for="floating2">LastName</label>
+                                    <label htmlFor="floating2">LastName</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err2}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="email" className="form-control" id="floating3"  onChange={(e)=>setEmail(e.target.value)}/>
-                                    <label for="floating3">Email ID</label>
+                                    <label htmlFor="floating3">Email ID</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err3}</p>
                             <div className="row">
                                 <div className="d-flex flex-row align-center">
                                     <input type="radio" className='ms-3' name="gender" id="male-gender" value="male" onChange={(e)=>setGender(e.target.value)}/>
-                                    <label style={{color:"snow"}} for="male-gender">Male</label>
+                                    <label style={{color:"snow"}} htmlFor="male-gender">Male</label>
                                     <input type="radio" className='ms-3' name="gender" id="female-gender" value="female" onChange={(e)=>setGender(e.target.value)}/>
-                                    <label style={{color:"snow"}} for="female-gender">Female</label>
+                                    <label style={{color:"snow"}} htmlFor="female-gender">Female</label>
                                     <input type="radio" className='ms-3' name="gender" id="other-gender" value="other" onChange={(e)=>setGender(e.target.value)}/>
-                                    <label style={{color:"snow"}} for="other-gender">Other</label>
+                                    <label style={{color:"snow"}} htmlFor="other-gender">Other</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err4}</p>
@@ -640,35 +640,35 @@ const DoctorListTable=()=>{
                                     <option value="Nephrologists">Nephrologists</option>
                                     <option value="Podiatrists">Podiatrists</option>
                                 </select>
-                                <label for="floating4">Specialization</label>
+                                <label htmlFor="floating4">Specialization</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err5}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="floating5"  onChange={(e)=>setDescription(e.target.value)}/>
-                                    <label for="floating5">Description</label>
+                                    <label htmlFor="floating5">Description</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err6}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="floating6"  onChange={(e)=>setAddress(e.target.value)}/>
-                                    <label for="floating6">Address</label>
+                                    <label htmlFor="floating6">Address</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err7}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="floating7"  onChange={(e)=>setLocation(e.target.value)}/>
-                                    <label for="floating7">Location</label>
+                                    <label htmlFor="floating7">Location</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err8}</p>
                             <div className="row">
                                 <div className="form-floating">
                                     <input type="text" className="form-control" id="floating8"  onChange={(e)=>setPhoneNumber(e.target.value)}/>
-                                    <label for="floating8">Phone Number</label>
+                                    <label htmlFor="floating8">Phone Number</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err9}</p>
@@ -679,21 +679,21 @@ const DoctorListTable=()=>{
                                         <option value="available">Available</option>
                                         <option value="unavailable">Unavailable</option>
                                         </select>
-                                        <label for="floating9">Availability</label>
+                                        <label htmlFor="floating9">Availability</label>
                                     </div>
                                 </div>
                                 <p className="app-err row">{err10}</p>
                                 <div className="row">
                                     <div className="form-floating">
                                         <input type="file" className="form-control" id="floating10"  onChange={(e)=>{var a=(e.target.value);setImage(a.replace("C:\\fakepath\\", "../"));}}/>
-                                        <label for="floating10">Avatar</label>
+                                        <label htmlFor="floating10">Avatar</label>
                                     </div>
                                 </div>
                                 <p className="app-err row">{err11}</p>
                                 <div className="row">
                                     <div className="form-floating">
                                         <input type="number" className="form-control" id="floating11"  onChange={(e)=>setFees(e.target.value)}/>
-                                        <label for="floating11">Fees</label>
+                                        <label htmlFor="floating11">Fees</label>
                                     </div>
                                 </div>
                                 <p className="app-err row">{err12}</p>
