@@ -189,53 +189,53 @@ const DoctorDetail=()=>{
                                         <div className="my-2 col d-flex flex-column time-slot">
                                             <div>
                                                 <input className="slot-ui" disabled={disable1} type="radio" name="app-time" id="slot1" value="slot1" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot1" style={{color:(disable1)? "gainsboro":(document.getElementById('slot1').checked)?"green":"black"}}>10.00 A.M</label>
+                                                <label htmlFor="slot1" style={{color:(disable1)? "gainsboro":(document.getElementById('slot1').checked)?"green":"black"}}>10.00 A.M</label>
                                             </div>
                                            <div>
                                                 <input className="slot-ui" disabled={disable2} type="radio" name="app-time" id="slot2" value="slot2" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot2" style={{color:(disable2)? "gainsboro":(document.getElementById('slot2').checked)?"green":"black"}}>10.30 A.M</label>
+                                                <label  htmlFor="slot2" style={{color:(disable2)? "gainsboro":(document.getElementById('slot2').checked)?"green":"black"}}>10.30 A.M</label>
                                            </div>
                                            <div>
                                                 <input className="slot-ui" disabled={disable3} type="radio" name="app-time" id="slot3" value="slot3" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot3" style={{color:(disable3)? "gainsboro":(document.getElementById('slot3').checked)?"green":"black"}}>11.00 A.M</label>
+                                                <label htmlFor="slot3" style={{color:(disable3)? "gainsboro":(document.getElementById('slot3').checked)?"green":"black"}}>11.00 A.M</label>
                                            </div>
                                            <div>
                                                 <input className="slot-ui"  disabled={disable4} type="radio" name="app-time" id="slot4" value="slot4" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot4" style={{color:(disable4)? "gainsboro":(document.getElementById('slot4').checked)?"green":"black"}}>11.30 A.M</label>
+                                                <label htmlFor="slot4" style={{color:(disable4)? "gainsboro":(document.getElementById('slot4').checked)?"green":"black"}}>11.30 A.M</label>
                                            </div>
                                            <div>
                                                 <input className="slot-ui" disabled={disable5} type="radio" name="app-time" id="slot5" value="slot5" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot5" style={{color:(disable5)? "gainsboro":(document.getElementById('slot5').checked)?"green":"black"}}>12.00 P.M</label>
+                                                <label htmlFor="slot5" style={{color:(disable5)? "gainsboro":(document.getElementById('slot5').checked)?"green":"black"}}>12.00 P.M</label>
                                            </div>
                                            <div>
                                                 <input className="slot-ui" disabled={disable6} type="radio" name="app-time" id="slot6" value="slot6" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot6" style={{color:(disable6)? "gainsboro":(document.getElementById('slot6').checked)?"green":"black"}}>12.30 P.M</label>
+                                                <label htmlFor="slot6" style={{color:(disable6)? "gainsboro":(document.getElementById('slot6').checked)?"green":"black"}}>12.30 P.M</label>
                                            </div>                  
                                         </div>
                                         <div className="my-2 col d-flex flex-column">
                                             <div>
                                                 <input className="slot-ui" disabled={disable7} type="radio" name="app-time" id="slot7" value="slot7" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot7" style={{color:(disable7)? "gainsboro":(document.getElementById('slot7').checked)?"green":"black"}}>4.00 P.M</label>
+                                                <label htmlFor="slot7" style={{color:(disable7)? "gainsboro":(document.getElementById('slot7').checked)?"green":"black"}}>4.00 P.M</label>
                                             </div>
                                             <div>
                                                 <input className="slot-ui" disabled={disable8} type="radio" name="app-time" id="slot8" value="slot8" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot8" style={{color:(disable8)? "gainsboro":(document.getElementById('slot8').checked)?"green":"black"}}>4.30 P.M</label>
+                                                <label htmlFor="slot8" style={{color:(disable8)? "gainsboro":(document.getElementById('slot8').checked)?"green":"black"}}>4.30 P.M</label>
                                             </div>
                                             <div>
                                                 <input className="slot-ui" disabled={disable9} type="radio" name="app-time" id="slot9" value="slot9" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot9" style={{color:(disable9)? "gainsboro":(document.getElementById('slot9').checked)?"green":"black"}}>5.00 P.M</label>
+                                                <label htmlFor="slot9" style={{color:(disable9)? "gainsboro":(document.getElementById('slot9').checked)?"green":"black"}}>5.00 P.M</label>
                                             </div>
                                             <div>
                                                 <input className="slot-ui" disabled={disable10} type="radio" name="app-time" id="slot10" value="slot10" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot10" style={{color:(disable10)? "gainsboro":(document.getElementById('slot10').checked)?"green":"black"}}>5.30 P.M</label>
+                                                <label htmlFor="slot10" style={{color:(disable10)? "gainsboro":(document.getElementById('slot10').checked)?"green":"black"}}>5.30 P.M</label>
                                             </div>
                                             <div>
                                                 <input className="slot-ui" disabled={disable11} type="radio" name="app-time" id="slot11" value="slot11" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot11" style={{color:(disable11)? "gainsboro":(document.getElementById('slot11').checked)?"green":"black"}}>6.00 P.M</label>
+                                                <label htmlFor="slot11" style={{color:(disable11)? "gainsboro":(document.getElementById('slot11').checked)?"green":"black"}}>6.00 P.M</label>
                                             </div>
                                             <div>
                                                 <input className="slot-ui" disabled={disable12} type="radio" name="app-time" id="slot12" value="slot12" onChange={(e)=>setBookTime(e.target.value)}/>
-                                                <label for="slot12" style={{color:(disable12)? "gainsboro":(document.getElementById('slot12').checked)?"green":"black"}}>6.30 P.M</label>
+                                                <label htmlFor="slot12" style={{color:(disable12)? "gainsboro":(document.getElementById('slot12').checked)?"green":"black"}}>6.30 P.M</label>
                                             </div> 
                                         </div>     
                                 </div>
