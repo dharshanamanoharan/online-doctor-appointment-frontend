@@ -1156,6 +1156,7 @@ body
     height:200px;
     border-radius: 50%;
     border:2px solid rgb(70, 70, 70);
+    display: block !important;
 }
 .admin-panel-users .view-profile p,
 .admin-panel-doctors .view-profile p,

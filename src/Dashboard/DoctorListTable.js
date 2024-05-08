@@ -93,7 +93,7 @@ const DoctorListTable=()=>{
     }
      
     const [page, setPage] = React.useState(0);
-    const [rowsPerPage, setRowsPerPage] = React.useState(5);
+    const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
     const handleChangePage = (event, newPage) => 
     {
@@ -479,7 +479,6 @@ const DoctorListTable=()=>{
                             <div className="row">
                                 <div className="form-floating">
                                     <select className="form-control" id="float4" value={specialization} onChange={(e)=>setSpecialization(e.target.value)} placeholder={specialization}>
-                                    <label for="float4">Specialization</label>
                                     <option value="">Select Specialization</option>
                                     <option value="Psychiatrist">Psychiatrist</option>
                                     <option value="Oncologist">Oncologist</option>
@@ -495,6 +494,7 @@ const DoctorListTable=()=>{
                                     <option value="Nephrologist">Nephrologist</option>
                                     <option value="Podiatrist">Podiatrist</option>
                                 </select>
+                                <label for="float4">Specialization</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err5}</p>
@@ -529,11 +529,11 @@ const DoctorListTable=()=>{
                                 <div className="row">
                                     <div className="form-floating">
                                         <select className="form-control"  id="float9" value={availability}  onChange={(e)=>setAvailability(e.target.value)}>
-                                        <label for="float9">Availability</label>
                                         <option value="">Select Availability</option>
                                         <option value="available">Available</option>
                                         <option value="unavailable">Unavailable</option>
                                         </select>
+                                        <label for="float9">Availability</label>
                                     </div>
                                 </div>
                                 <p className="app-err row">{err10}</p>
@@ -625,7 +625,6 @@ const DoctorListTable=()=>{
                             <div className="row">
                                 <div className="form-floating">
                                     <select className="form-control" id="floating4"  onChange={(e)=>setSpecialization(e.target.value)}>
-                                    <label for="floating4">Specialization</label>
                                     <option value="">Select Specialization</option>
                                     <option value="Psychiatrist">Psychiatrist</option>
                                     <option value="Oncologist">Oncologist</option>
@@ -641,6 +640,7 @@ const DoctorListTable=()=>{
                                     <option value="Nephrologists">Nephrologists</option>
                                     <option value="Podiatrists">Podiatrists</option>
                                 </select>
+                                <label for="floating4">Specialization</label>
                                 </div>
                             </div>
                             <p className="app-err row">{err5}</p>
@@ -675,11 +675,11 @@ const DoctorListTable=()=>{
                                 <div className="row">
                                     <div className="form-floating">
                                         <select className="form-control"  id="floating9"  onChange={(e)=>setAvailability(e.target.value)}>
-                                        <label for="floating9">Availability</label>
                                         <option value="">Select Availability</option>
                                         <option value="available">Available</option>
                                         <option value="unavailable">Unavailable</option>
                                         </select>
+                                        <label for="floating9">Availability</label>
                                     </div>
                                 </div>
                                 <p className="app-err row">{err10}</p>
