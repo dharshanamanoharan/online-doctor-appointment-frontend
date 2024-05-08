@@ -15,7 +15,7 @@ import { funShowPassword } from '../AuthService/ShowPassword';
 const UserListTable=()=>{
     const dispatch=useDispatch();
     const user=useSelector((state)=>state.user)
-    console.log("user from reducer",user);
+    //console.log("user from reducer",user);
 
     //Getting User List
     const [userData,setUserData]=useState([]);
@@ -106,7 +106,7 @@ const UserListTable=()=>{
     {
         var sel=document.getElementById("floatingInput5");
         var selArr=[];
-        console.log("len",sel.options.length)
+        //console.log("len",sel.options.length)
         for(var i=0;i<sel.options.length;i++)
         {
             if(sel.options[i].selected===true)
@@ -309,7 +309,7 @@ const UserListTable=()=>{
                         </div>
                         <div className="modal-body view-profile">
                             <div className=" card pb-2" >
-                                    <img src={user[0].user_avatar} className="card-img-top img-fluid" alt="..."/>
+                                    <img src={user[0].user_avatar} className="card-img-top img-fluid" />
                                     <div className="card-body">
                                         <p><span>User ID : </span>{user[0].id}</p>
                                         <p><span>First Name : </span>{user[0].firstName}</p>
