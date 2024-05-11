@@ -67,7 +67,7 @@ const Footer = () => {
     setQuote(quotes[i].quote);
     setImage(quotes[i].image);
   }
- setInterval(funFact,20000);
+ setInterval(funFact,10000);
  
   return (
     <>
@@ -132,7 +132,7 @@ const Footer = () => {
               </div>
               <div className="modal-footer pb-2">
                 <button className="close-fact mb-3"  data-bs-dismiss="modal">Close</button>
-                <span>Different facts will be displayed every 15 seconds!</span>
+                <span>Different facts will be displayed every 10 seconds!</span>
               </div>
             </div>
           </div>

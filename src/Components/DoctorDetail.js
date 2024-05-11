@@ -145,9 +145,9 @@ const DoctorDetail=()=>{
                     <div className="row">
                         {/*Doctor Details*/}
                         <div className="col-lg-8 col-12 doc-col">         
-                        <>
-                            <div className="row doc-img p-0 m-1">
-                                <img  src={"http://localhost:3000/"+(doctorInfo[0].image)} style={{width:"200px",height:"200px"}} />
+                    
+                            <div className="row doc-img  m-1">
+                                <img  className="px-0" src={"http://localhost:3000/"+(doctorInfo[0].image)} />
                             </div>
                             <div className="row">
                                 <div className="card-body doc-desc ms-3">
@@ -161,7 +161,7 @@ const DoctorDetail=()=>{
                                 </div>
                             </div>
                             </div>
-                            </>
+                         
                         </div>
                        {/*Book Now- Just Selecting date,time and option*/}
                        {(isAuth)?

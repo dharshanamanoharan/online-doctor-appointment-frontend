@@ -902,6 +902,10 @@ body
     align-items: center;
     justify-content: center;
 }
+.book-col .card
+{
+    border:1px solid #494A80;
+}
 .doctor-detail-container .book-col .card-footer
 {
     border:none;
@@ -944,18 +948,15 @@ body
     border: 1px solid #494A80;
     border-radius: 8px;
 }
-.doctor-detail-container .doc-col .img-fluid
-{
-    border-radius: 8px;
-}
-.doctor-detail-container .doc-col .doc-img
-{
-    width:150px;
-    height:200px;
-    border-radius: 50%;
-    padding: 0px !important;
 
-   
+.doctor-detail-container .doc-col .doc-img,
+.doc-img img
+{
+    width:200px;
+    height:220px;
+    border:1.5px solid #494A80;
+    border-radius: 8px;
+    padding: 0px !important;
 }
 .doctor-detail-container .doc-desc
 {
