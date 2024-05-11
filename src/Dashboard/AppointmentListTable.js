@@ -228,7 +228,7 @@ const AppointmentListTable=()=>{
                         <div className="modal-body ">
                         
                             <div className=" card pb-2" >
-                                    <img src={(appointment[0].status.toLowerCase()==="pending for approval")?pendingAvatar:(appointment[0].status==="approved")?appAvatar:declinedAvatar} className='card-img-top img-fluid' />
+                                    <img src={(appointment[0].status.toLowerCase()==="pending for approval")?"http://localhost:3000/"+pendingAvatar:(appointment[0].status==="approved")?"http://localhost:3000/"+appAvatar:"http://localhost:3000/"+declinedAvatar} className='card-img-top img-fluid' />
                                     <div className="card-body view-profile">
                                         <p><span>Appointment ID : </span>{appointment[0].appointmentId}</p>
                                         <p><span>Doctor Name: </span>{appointment[0].doctorFirstName} {appointment[0].doctorLastName}</p>

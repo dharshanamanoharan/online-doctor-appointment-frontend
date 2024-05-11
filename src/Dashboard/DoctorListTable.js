@@ -413,7 +413,7 @@ const DoctorListTable=()=>{
                             </div>
                         <div className="modal-body view-profile">
                             <div className=" card pb-2" >
-                                <img src={doctor[0].image} className="card-img-top img-fluid" alt="..."/>
+                                <img src={"http://localhost:3000/"+doctor[0].image} className="card-img-top img-fluid" alt="..."/>
                                 <div className="card-body">
                                         <p><span>Doctor ID : </span>{doctor[0].id}</p>
                                         <p><span>First Name : </span>{doctor[0].firstName}</p>

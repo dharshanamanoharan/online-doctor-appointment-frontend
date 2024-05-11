@@ -946,15 +946,15 @@ body
 }
 .doctor-detail-container .doc-col .img-fluid
 {
-    width:200px;
-    height:200px;
     border-radius: 8px;
 }
 .doctor-detail-container .doc-col .doc-img
 {
-    background-color: #494A80;
-    height: 70%;
-    border-radius: 8px;
+    width:150px;
+    height:200px;
+    border-radius: 50%;
+    padding: 0px !important;
+
    
 }
 .doctor-detail-container .doc-desc

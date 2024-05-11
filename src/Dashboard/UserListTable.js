@@ -295,7 +295,7 @@ const UserListTable=()=>{
                         </div>
                         <div className="modal-body view-profile">
                             <div className=" card pb-2" >
-                                    <img src={(user[0].user_avatar)} className="card-img-top img-fluid" />
+                                    <img src={"http://localhost:3000/"+(user[0].user_avatar)} className="card-img-top img-fluid" />
                                     <div className="card-body">
                                         <p><span>User ID : </span>{user[0].id}</p>
                                         <p><span>First Name : </span>{user[0].firstName}</p>

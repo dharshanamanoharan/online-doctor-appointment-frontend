@@ -146,7 +146,7 @@ const DoctorDetail=()=>{
                         {/*Doctor Details*/}
                         <div className="col-lg-8 col-12 doc-col">         
                         <>
-                            <div className="row doc-img py-3 m-1">
+                            <div className="row doc-img p-0 m-1">
                                 <img  src={"http://localhost:3000/"+(doctorInfo[0].image)} style={{width:"200px",height:"200px"}} />
                             </div>
                             <div className="row">
