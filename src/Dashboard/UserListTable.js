@@ -34,20 +34,6 @@ const UserListTable=()=>{
     }
     useEffect(()=>{getAllUsers();},[funDeleteUser,funEditUser]);
     
-
-    //Viewing the user
-    async function funViewUser(id)
-    {
-        try{   
-            const res=await axios.get("http://localhost:8080/docplus.in/user/"+id);
-            //console.log(res.data); 
-        }
-        catch(error)
-        {
-            console.log(error)
-        }
-    }
-
      //Editing the user
      const [firstName,setFirstName]=useState(user[0].firstName);
      const [lastName,setLastName]=useState(user[0].lastName);
@@ -265,7 +251,7 @@ const UserListTable=()=>{
                                   );}
                                 )} 
                                 <TableCell style={{backgroundColor:((i)%2===0)?"rgb(41, 39, 39)":"rgb(41, 39, 39)",color:"snow"}}>
-                                    <button className="view-user" onClick={()=>{(dispatch(CurrentUser(userData,userId)));funViewUser(userId)}}  data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+                                    <button className="view-user" onClick={()=>{(dispatch(CurrentUser(userData,userId)));}}  data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
                                         <i className="fa-solid fa-eye"></i>
                                     </button>
                                 </TableCell>
@@ -309,7 +295,7 @@ const UserListTable=()=>{
                         </div>
                         <div className="modal-body view-profile">
                             <div className=" card pb-2" >
-                                    <img src={user[0].user_avatar} className="card-img-top img-fluid" />
+                                    <img src={(user[0].user_avatar)} className="card-img-top img-fluid" />
                                     <div className="card-body">
                                         <p><span>User ID : </span>{user[0].id}</p>
                                         <p><span>First Name : </span>{user[0].firstName}</p>

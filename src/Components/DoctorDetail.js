@@ -12,18 +12,7 @@ const DoctorDetail=()=>{
         const isAuth=isUserLoggedIn();
         const doctorId1=useParams();
        // console.log("Param in Doctor Detail Page",doctorId1);
-        const [doctorInfo,setDoctorInfo]=useState([
-            {
-                firstName:"",
-                firstName:"",
-                image:"",
-                specialization:"",
-                description:"",
-                email:"",
-                location:"",
-                address:"",
-                phoneNumber:""
-            }]);
+        const [doctorInfo,setDoctorInfo]=useState([{image:""}]);
         const getDoctor=async()=>{
         try{
             const res=await axios.get(`http://localhost:8080/docplus.in/doctor/${doctorId1.doctorId}`);
@@ -158,7 +147,7 @@ const DoctorDetail=()=>{
                         <div className="col-lg-8 col-12 doc-col">         
                         <>
                             <div className="row doc-img py-3 m-1">
-                                <img  src={doctorInfo[0].image} style={{width:"200px",height:"200px"}}/>
+                                <img  src={"http://localhost:3000/"+(doctorInfo[0].image)} style={{width:"200px",height:"200px"}} />
                             </div>
                             <div className="row">
                                 <div className="card-body doc-desc ms-3">
