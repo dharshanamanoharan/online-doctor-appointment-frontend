@@ -15,21 +15,21 @@ const Home=()=>{
               <div className="card col m-3" >
                     <img src="find-a-doctor.svg" style={{transform:"Scale(1.1)"}} className="card-img-top img-fluid" alt="..."/>
                     <div className="card-body">
-                    <Link to="/docplus.in/doctors-list"><h6 className="card-title"><i className="me-3 fa fa-search"></i>FIND A DOCTOR</h6></Link>
+                    <Link to="/docplus.in/doctors-list" style={{color:"blue"}}><h6 className="card-title"><i className="me-3 fa fa-search"></i>FIND A DOCTOR</h6></Link>
                     <p className="card-text">Browse through the doctor's list to find one. Searching with filters would further enhance the results.</p>
                     </div>
                   </div>
                   <div className="card col m-3"  >
                     <img src="view-doctor.svg" style={{transform:"Scale(0.8)"}} className="card-img-top img-fluid" alt="..."/>
                     <div className="card-body">
-                    <Link to="/docplus.in/doctors-list"><h6 className="card-title"><i className="me-3 fa fa-eye"></i>VIEW PROFILE</h6></Link>
+                    <h6 className="card-title"><i className="me-3 fa fa-eye"></i>VIEW PROFILE</h6>
                     <p className="card-text">Choose a particular doctor and have a look on his/her detailed profile view.</p>
                     </div>
                   </div>
                   <div className="card col m-3" >
                     <img src="book-a-appointment.svg" class="card-img-top img-fluid" alt="..."/>
                     <div className="card-body">
-                    <Link to="/docplus.in/doctors-list"><h6 className="card-title"><i className="me-3 fa fa-hand-pointer-o"/>BOOK A VISIT</h6></Link>
+                    <h6 className="card-title"><i className="me-3 fa fa-hand-pointer-o"/>BOOK A VISIT</h6>
                     <p className="card-text">Pick a date and slot. Proceed with the necessary details and payment information to book an appointment.</p>
                     </div>
                   </div>
