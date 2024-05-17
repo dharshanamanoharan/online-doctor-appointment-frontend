@@ -1,4 +1,4 @@
-
+import axios from "axios";
 //Implementing basic authentication
 //To store token in local storage
 export const StoreToken=(token)=>localStorage.setItem("token",token);
@@ -63,3 +63,13 @@ export const logout = () => {
     localStorage.clear();
     sessionStorage.clear();
 }
+
+// Add a request interceptor
+axios.interceptors.request.use(function (config) {
+    config.headers['Authorization'] = GetToken();
+    return config;
+  }, function (error) {
+    // Do something with request error
+    return Promise.reject(error);
+  });
+  
