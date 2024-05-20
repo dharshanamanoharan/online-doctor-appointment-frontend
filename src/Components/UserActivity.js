@@ -58,7 +58,7 @@ const UserActivity=()=>{
             appointmentData[i].slotTime,
             appointmentData[i].status,
             appointmentData[i].amountPaid,
-            appointmentData[i].paymentID,
+            /*appointmentData[i].paymentID,*/
             /*appointmentData[i].orderID,*/
            )
     }
@@ -66,25 +66,25 @@ const UserActivity=()=>{
       
     //Creating columns of the table
     const columns = [
-        {label: 'Appointment_ID',id:"appointmentId"},
-        {label: 'Doctor_ID',id:"doctorId"},
-        {label: 'Doctor_First_Name',id:"doctorFirstName"},
-        {label: 'Doctor_Last_Name',id:"doctorLastName"},
-        {label: 'Doctor_Email',id:"doctorEmail"},
-        {label: 'Doctor_Contact_Number',id:"doctorContactNumber"},
-        {label: 'Doctor_Address',id:"doctorAddress"},
-        {label: 'Patient_First_Name',id:"patientFirstName"},
-        {label: 'Patient_Last_Name',id:"patientLastName"},
-        {label: 'Patient_Email',id:"patientEmail"},
-        {label: 'Patient_Contact_Number',id:"patientContactNumber"},
-        {label: 'Patient_Visit_Reason',id:"patientVisitReason"},
-        {label: 'Patient_Gender',id:"patientGender"},
-        {label: 'Patient_Age',id:"patientAge"},
-        {label: 'Slot_Date',id:"slotDate"},
-        {label: 'Slot_Time',id:"slotTime"},
+        {label: 'AppointmentID',id:"appointmentId"},
+        /*{label: 'DoctorID',id:"doctorId"},*/
+        {label: 'DoctorName',id:"doctorFirstName"},
+        /*{label: 'DoctorLastName',id:"doctorLastName"},*/
+        {label: 'DoctorEmail',id:"doctorEmail"},
+       /* {label: 'DoctorContactNumber',id:"doctorContactNumber"},
+        {label: 'DoctorAddress',id:"doctorAddress"},*/
+        {label: 'PatientName',id:"patientFirstName"},
+       /* {label: 'PatientLastName',id:"patientLastName"},*/
+        /*{label: 'PatientEmail',id:"patientEmail"},*/
+        /*{label: 'PatientContactNumber',id:"patientContactNumber"},*/
+        {label: 'PatientVisitReason',id:"patientVisitReason"},
+        /*{label: 'PatientGender',id:"patientGender"},
+        {label: 'PatientAge',id:"patientAge"},*/
+        {label: 'SlotDate',id:"slotDate"},
+        {label: 'SlotTime',id:"slotTime"},
         {label: 'Status',id:"status"},
-        {label: 'Amount_Paid',id:"amountPaid"},
-        {label: 'Payment_ID',id:"paymentID"},
+        {label: 'AmountPaid',id:"amountPaid"},
+        /*{label: 'Payment_ID',id:"paymentID"},*/
        /* {label: 'Order_ID',id:"orderID"},*/
         
     ];

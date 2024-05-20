@@ -4,11 +4,13 @@ import axios from "axios";
 import { useEffect } from "react";
 import { funShowPassword, funShowPassword1 } from "../AuthService/ShowPassword";
 const UserProfile=()=>{
+    
     const [firstName,setFirstName]=useState();
     const [lastName,setLastName]=useState();
     const [userName,setUserName]=useState();
     const [email,setEmail]=useState();
     const [user_avatar,setUserAvatar]=useState();
+    const [displayPicture,setDisplayPicture]=useState();
     const [password,setPassword]=useState("");
     const [role,setRole]=useState("");
     const[roles,setRoles]=useState([]);
@@ -21,8 +23,11 @@ const UserProfile=()=>{
             userName:"",
             user_avatar:"",
             password:"",
+            displayPicture:""
 
     })
+   
+    
    
     const profile=async()=>{
         try{
@@ -33,6 +38,8 @@ const UserProfile=()=>{
             setUserName(res.data.userName);
             setEmail(res.data.email);
             setUserAvatar(res.data.user_avatar);
+            setDisplayPicture(res.data.displayPicture);
+            console.log(res.data.displayPicture.toString());
             
         }
         catch(error)
@@ -72,9 +79,9 @@ const UserProfile=()=>{
         document.getElementById("floatingInput6").value="";   
     }
 
+    const formData = new FormData();
     async function funEditProfile()
     {
-        
        setErr1("");setErr2("");setErr3("");setErr4("");
        setErr6("");setUpdateMessage("");
        //Ternary
@@ -161,7 +168,6 @@ const UserProfile=()=>{
     return(
         <>
         <section className="container-fluid edit-my-profile-section py-5">
-          
             <img src={profileData.user_avatar} className="mb-4 img-fluid profile-picture"/>
             <div className="profile-detail">
                 <p><span>User ID : </span>{profileId}</p>
@@ -218,7 +224,8 @@ const UserProfile=()=>{
                             <p className="row app-err">{err4}</p>
                             <div className='row'>
                                 <div className="form-floating">
-                                    <input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=(e.target.value);setUserAvatar(a.replace("C:\\fakepath\\", "../"));}} />
+                                   {/*<input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=(e.target.value);setUserAvatar(a.replace("C:\\fakepath\\", "../"));}} />*/}
+                                   <input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=URL.createObjectURL(e.target.files[0]);setUserAvatar(a);}} />
                                     <label for="floatingInput6">User Avatar</label>
                                 </div>
                             </div>
@@ -234,7 +241,7 @@ const UserProfile=()=>{
 
 
                     {/*Modal-Change Password*/}
-            <div className="modal fade" id="staticBackdropchangepwd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div className="modal fade" id="staticBackdropchangepwd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <div className="modal-dialog">
                         <div className="modal-content">
                         <div className="modal-header">
@@ -242,7 +249,7 @@ const UserProfile=()=>{
                             <a className="col-1"  data-bs-dismiss="modal" onClick={()=>{setUpdateMessage("");editPwdClr();}}><i className="fa-solid fa-x"></i></a>
                         </div>
                         <div className="modal-body d-flex flex-column py-5">
-		<div className="row">
+		                <div className="row">
                                 <div className="form-floating p-1 col-12 d-flex flex-row">
                                     <input type="password" className="form-control" id="floatingPassword" onChange={(e)=>{setOldPassword(e.target.value);}}/>
                                     <label for="floatingPassword">Old Password</label>
@@ -271,9 +278,6 @@ const UserProfile=()=>{
                         </div>
                     </div>
                     </div>
-
-
-
         </section>
         </>
     );
