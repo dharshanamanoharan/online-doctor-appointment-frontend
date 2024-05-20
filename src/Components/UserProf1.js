@@ -24,7 +24,6 @@ const UserProf1=()=>{
             user_avatar:"",
             password:"",
             displayPicture:""
-
     })
    
     
@@ -39,7 +38,7 @@ const UserProf1=()=>{
             setEmail(res.data.email);
             setUserAvatar(res.data.user_avatar);
             setDisplayPicture(res.data.displayPicture);
-            console.log(res.data.displayPicture.toString());
+            console.log(res.data.displayPicture);
             
         }
         catch(error)
