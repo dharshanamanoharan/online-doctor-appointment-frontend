@@ -54,7 +54,7 @@ const DoctorListTable=()=>{
     {
         rows[i]=createData(
             doctorData[i].id,
-            doctorData[i].firstName,
+            doctorData[i].firstName+" "+
             doctorData[i].lastName,
             doctorData[i].email,
             doctorData[i].gender,
@@ -72,24 +72,24 @@ const DoctorListTable=()=>{
       
     //Creating columns of the table
     const columns = [
-        {label: 'Doctor_ID',id:"doctorID"},
-        {label: 'First_Name',id:"firstName"},
-        {label: 'Last_Name',id:"lastName"},
-        {label: 'Email_ID',id:"email"},
+        {label: 'DoctorID',id:"doctorID"},
+        {label: 'Name',id:"Name"},
+       /* {label: 'Last_Name',id:"lastName"},*/
+        {label: 'EmailID',id:"email"},
         {label: 'Gender',id:"gender"},
         {label: 'Specialization',id:"specialization"},
        /* {label: 'Description',id:"description"},*/
         {label: 'Address',id:"address"},
         {label: 'Location',id:"location"},
-        {label: 'Phone_Number',id:"phoneNumber"},
+        {label: 'PhoneNumber',id:"phoneNumber"},
         {label: 'Availability',id:"availability"},
        /* {label: 'Image',id:"image"},*/
         {label: 'Fees',id:"fees"}
     ];
     
 
-    function createData(doctorID,firstName,lastName,email,gender,specialization,address,location,phoneNumber,availability,fees) {
-        return {doctorID,firstName,lastName,email,gender,specialization,address,location,phoneNumber,availability,fees};
+    function createData(doctorID,Name,email,gender,specialization,address,location,phoneNumber,availability,fees) {
+        return {doctorID,Name,email,gender,specialization,address,location,phoneNumber,availability,fees};
     }
      
     const [page, setPage] = React.useState(0);

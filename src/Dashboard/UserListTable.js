@@ -188,18 +188,18 @@ const UserListTable=()=>{
       
     //Creating columns of the table
     const columns = [
-        {label: 'User_ID',id:"userID"},
-        {label: 'First_Name',id:"firstName"},
-        {label: 'Last_Name',id:"lastName"},
-        {label: 'User_Name',id:"userName"},
-        {label: 'Email_ID',id:"email"},
+        {label: 'UserID',id:"userID"},
+        {label: 'Name',id:"Name"},
+       /* {label: 'Last_Name',id:"lastName"},*/
+        {label: 'UserName',id:"userName"},
+        {label: 'EmailID',id:"email"},
         {label: 'Role',id:"role"},
         {label: 'Verified',id:"enabled"},
     ];
     
 
-    function createData(userID,firstName,lastName,userName,email,role,enabled) {
-        return { userID,firstName,lastName,userName,email,role,enabled};
+    function createData(userID,Name,userName,email,role,enabled) {
+        return { userID,Name,userName,email,role,enabled};
     }
      
     const [page, setPage] = React.useState(0);
