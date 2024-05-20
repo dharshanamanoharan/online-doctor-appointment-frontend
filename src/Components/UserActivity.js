@@ -42,12 +42,12 @@ const UserActivity=()=>{
         rows[i]=createData(
             appointmentData[i].appointmentId,
             appointmentData[i].doctorId,
-            appointmentData[i].doctorFirstName,
+            appointmentData[i].doctorFirstName+" "+
             appointmentData[i].doctorLastName,
             appointmentData[i].doctorEmail,
             appointmentData[i].doctorContactNumber,
             appointmentData[i].doctorAddress,
-            appointmentData[i].patientFirstName,
+            appointmentData[i].patientFirstName+" "+
             appointmentData[i].patientLastName,
             appointmentData[i].patientEmail,
             appointmentData[i].patientContactNumber,
@@ -68,12 +68,12 @@ const UserActivity=()=>{
     const columns = [
         {label: 'AppointmentID',id:"appointmentId"},
         /*{label: 'DoctorID',id:"doctorId"},*/
-        {label: 'DoctorName',id:"doctorFirstName"},
+        {label: 'DoctorName',id:"doctorName"},
         /*{label: 'DoctorLastName',id:"doctorLastName"},*/
-        {label: 'DoctorEmail',id:"doctorEmail"},
+      /*  {label: 'DoctorEmail',id:"doctorEmail"},*/
        /* {label: 'DoctorContactNumber',id:"doctorContactNumber"},
         {label: 'DoctorAddress',id:"doctorAddress"},*/
-        {label: 'PatientName',id:"patientFirstName"},
+        {label: 'PatientName',id:"patientName"},
        /* {label: 'PatientLastName',id:"patientLastName"},*/
         /*{label: 'PatientEmail',id:"patientEmail"},*/
         /*{label: 'PatientContactNumber',id:"patientContactNumber"},*/
@@ -91,13 +91,13 @@ const UserActivity=()=>{
     
 
     function createData(appointmentId,
-    doctorId,doctorFirstName,doctorLastName,doctorEmail,doctorContactNumber,doctorAddress,
-    patientFirstName,patientLastName,patientEmail,patientContactNumber,patientVisitReason,
+    doctorId,doctorName,doctorEmail,doctorContactNumber,doctorAddress,
+    patientName,patientEmail,patientContactNumber,patientVisitReason,
     patientGender,patientAge,slotDate,slotTime,status,amountPaid,paymentID,orderID)
      {
         return {appointmentId,
-            doctorId,doctorFirstName,doctorLastName,doctorEmail,doctorContactNumber,doctorAddress,
-            patientFirstName,patientLastName,patientEmail,patientContactNumber,patientVisitReason,
+            doctorId,doctorName,doctorEmail,doctorContactNumber,doctorAddress,
+            patientName,patientEmail,patientContactNumber,patientVisitReason,
             patientGender,patientAge,slotDate,slotTime,status,amountPaid,paymentID,orderID };
     }
      
