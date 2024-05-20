@@ -82,7 +82,7 @@ const AppointmentListTable=()=>{
         {label: 'DoctorName',id:"doctorName"},
        /*{label: 'Doctor_Last_Name',id:"doctorLastName"},*/
         {label: 'DoctorEmail',id:"doctorEmail"},
-        {label: 'DoctorContact_Number',id:"doctorContactNumber"},
+        {label: 'DoctorContactNumber',id:"doctorContactNumber"},
         {label: 'DoctorAddress',id:"doctorAddress"},
         {label: 'PatientName',id:"patientName"},
        /* {label: 'Patient_Last_Name',id:"patientLastName"},*/
