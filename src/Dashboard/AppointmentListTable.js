@@ -45,16 +45,16 @@ const AppointmentListTable=()=>{
         rows[i]=createData(
             appointmentData[i].appointmentId,
             appointmentData[i].userId,
-            appointmentData[i].userFirstName,
+            appointmentData[i].userFirstName+" "+
             appointmentData[i].userLastName,
             appointmentData[i].userEmail,
             appointmentData[i].doctorId,
-            appointmentData[i].doctorFirstName,
+            appointmentData[i].doctorFirstName+" "+
             appointmentData[i].doctorLastName,
             appointmentData[i].doctorEmail,
             appointmentData[i].doctorContactNumber,
             appointmentData[i].doctorAddress,
-            appointmentData[i].patientFirstName,
+            appointmentData[i].patientFirstName+" "+
             appointmentData[i].patientLastName,
             appointmentData[i].patientEmail,
             appointmentData[i].patientContactNumber,
@@ -73,41 +73,41 @@ const AppointmentListTable=()=>{
       
     //Creating columns of the table
     const columns = [
-        {label: 'Appointment_ID',id:"appointmentId"},
-        {label: 'User_ID',id:"userId"},
-        {label: 'User_First_Name',id:"userFirstName"},
-        {label: 'User_Last_Name',id:"userLastName"},
-        {label: 'User_Email',id:"userEmail"},
-        {label: 'Doctor_ID',id:"doctorId"},
-        {label: 'Doctor_First_Name',id:"doctorFirstName"},
-        {label: 'Doctor_Last_Name',id:"doctorLastName"},
-        {label: 'Doctor_Email',id:"doctorEmail"},
-        {label: 'Doctor_Contact_Number',id:"doctorContactNumber"},
-        {label: 'Doctor_Address',id:"doctorAddress"},
-        {label: 'Patient_First_Name',id:"patientFirstName"},
-        {label: 'Patient_Last_Name',id:"patientLastName"},
-        {label: 'Patient_Email',id:"patientEmail"},
-        {label: 'Patient_Contact_Number',id:"patientContactNumber"},
-        {label: 'Patient_Visit_Reason',id:"patientVisitReason"},
-        {label: 'Patient_Gender',id:"patientGender"},
-        {label: 'Patient_Age',id:"patientAge"},
-        {label: 'Slot_Date',id:"slotDate"},
-        {label: 'Slot_Time',id:"slotTime"},
+        {label: 'AppointmentID',id:"appointmentId"},
+        {label: 'UserID',id:"userId"},
+        {label: 'UserName',id:"userName"},
+       /* {label: 'User_Last_Name',id:"userLastName"},*/
+        {label: 'UserEmail',id:"userEmail"},
+        {label: 'DoctorID',id:"doctorId"},
+        {label: 'DoctorName',id:"doctorName"},
+       /*{label: 'Doctor_Last_Name',id:"doctorLastName"},*/
+        {label: 'DoctorEmail',id:"doctorEmail"},
+        {label: 'DoctorContact_Number',id:"doctorContactNumber"},
+        {label: 'DoctorAddress',id:"doctorAddress"},
+        {label: 'PatientName',id:"patientName"},
+       /* {label: 'Patient_Last_Name',id:"patientLastName"},*/
+        {label: 'PatientEmail',id:"patientEmail"},
+        {label: 'PatientContactNumber',id:"patientContactNumber"},
+        {label: 'PatientVisitReason',id:"patientVisitReason"},
+        {label: 'PatientGender',id:"patientGender"},
+        {label: 'PatientAge',id:"patientAge"},
+        {label: 'SlotDate',id:"slotDate"},
+        {label: 'SlotTime',id:"slotTime"},
         {label: 'Status',id:"status"},
-        {label: 'Amount_Paid',id:"amountPaid"},
-        {label: 'Payment_ID',id:"paymentID"},
+        {label: 'AmountPaid',id:"amountPaid"},
+        {label: 'PaymentID',id:"paymentID"},
         /*{label: 'OrderID',id:"orderID"},    */
     ];
     
 
-    function createData(appointmentId,userId,userFirstName,userLastName,userEmail,
-    doctorId,doctorFirstName,doctorLastName,doctorEmail,doctorContactNumber,doctorAddress,
-    patientFirstName,patientLastName,patientEmail,patientContactNumber,patientVisitReason,
+    function createData(appointmentId,userId,userName,userEmail,
+    doctorId,doctorName,doctorEmail,doctorContactNumber,doctorAddress,
+    patientName,patientEmail,patientContactNumber,patientVisitReason,
     patientGender,patientAge,slotDate,slotTime,status,amountPaid,paymentID,orderID)
      {
-        return {appointmentId,userId,userFirstName,userLastName,userEmail,
-            doctorId,doctorFirstName,doctorLastName,doctorEmail,doctorContactNumber,doctorAddress,
-            patientFirstName,patientLastName,patientEmail,patientContactNumber,patientVisitReason,
+        return {appointmentId,userId,userName,userEmail,
+            doctorId,doctorName,doctorEmail,doctorContactNumber,doctorAddress,
+            patientName,patientEmail,patientContactNumber,patientVisitReason,
             patientGender,patientAge,slotDate,slotTime,status,amountPaid,paymentID,orderID };
     }
      
@@ -143,10 +143,7 @@ const AppointmentListTable=()=>{
             console.log(error);
             setUpdateMsg("Updation Failed!");
         }
-
     }
-
-    
     return(
         <section className='container-fluid p-5' style={{backgroundColor:"#1a1a1a",color:"snow",height:"100vh"}}>
         <h5 style={{textAlign:"center"}} className='mb-4'> APPOINTMENTS LIST</h5>
