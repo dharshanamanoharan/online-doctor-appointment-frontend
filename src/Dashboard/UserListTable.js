@@ -177,7 +177,7 @@ const UserListTable=()=>{
         var activated=userData[i].enabled?"true":"false";
         rows[i]=createData(
             userData[i].id,
-            userData[i].firstName,
+            userData[i].firstName+" "+
             userData[i].lastName,
             userData[i].userName,
             userData[i].email,
