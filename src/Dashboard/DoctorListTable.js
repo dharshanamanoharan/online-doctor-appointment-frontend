@@ -76,11 +76,11 @@ const DoctorListTable=()=>{
         {label: 'Name',id:"Name"},
        /* {label: 'Last_Name',id:"lastName"},*/
         {label: 'EmailID',id:"email"},
-        {label: 'Gender',id:"gender"},
+       /* {label: 'Gender',id:"gender"},*/
         {label: 'Specialization',id:"specialization"},
        /* {label: 'Description',id:"description"},*/
-        {label: 'Address',id:"address"},
-        {label: 'Location',id:"location"},
+       /* {label: 'Address',id:"address"},
+        {label: 'Location',id:"location"},*/
         {label: 'PhoneNumber',id:"phoneNumber"},
         {label: 'Availability',id:"availability"},
        /* {label: 'Image',id:"image"},*/
