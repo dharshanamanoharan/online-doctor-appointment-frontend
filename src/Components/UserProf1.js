@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { funShowPassword, funShowPassword1 } from "../AuthService/ShowPassword";
 const UserProf1=()=>{
-    
+   
     const [firstName,setFirstName]=useState();
     const [lastName,setLastName]=useState();
     const [userName,setUserName]=useState();
@@ -77,10 +77,13 @@ const UserProf1=()=>{
         document.getElementById("floatingInput4").value="";
         document.getElementById("floatingInput6").value="";   
     }
-
     const formData = new FormData();
+    
     async function funEditProfile()
     {
+       formData.append('',user_avatar);console.log("formData1",[...formData.entries()])
+       console.log("Form Data",formData);
+       const params = new URLSearchParams(formData).toString();
        setErr1("");setErr2("");setErr3("");setErr4("");
        setErr6("");setUpdateMessage("");
        //Ternary
@@ -94,14 +97,17 @@ const UserProf1=()=>{
            {
                try
                {   
-                   const res=await axios.put("http://localhost:8080/docplus.in/user/"+profileId,
+                   const res=await axios.put("http://localhost:8080/docplus.in/user/"+profileId+"?file="+ params,
                    {
                        firstName,
                        lastName,
                        userName,
                        email,
-                       user_avatar,role,roles,password
-                   });
+                       role,roles,password
+                   } ,{
+                    headers: {
+                      'Content-Type': 'multipart/form-data'
+                    }},);
                    setErr1("");setErr2("");setErr3("");setErr4("");
                    setErr6("");
                    setUpdateMessage("Updated Successfully!");
@@ -224,7 +230,7 @@ const UserProf1=()=>{
                             <div className='row'>
                                 <div className="form-floating">
                                    {/*<input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=(e.target.value);setUserAvatar(a.replace("C:\\fakepath\\", "../"));}} />*/}
-                                   <input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=URL.createObjectURL(e.target.files[0]);setUserAvatar(a);}} />
+                                   <input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{setUserAvatar(e.target.files[0]);}} />
                                     <label for="floatingInput6">User Avatar</label>
                                 </div>
                             </div>
