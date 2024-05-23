@@ -227,8 +227,8 @@ const UserProf1=()=>{
                             <p className="row app-err">{err4}</p>
                             <div className='row'>
                                 <div className="form-floating">
-                                   {/*<input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=(e.target.value);setUserAvatar(a.replace("C:\\fakepath\\", "../"));}} />*/}
-                                   <input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{setUserAvatar(e.target.files[0]);}} />
+                                   <input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=(e.target.value);setUserAvatar(a.replace("C:\\fakepath\\", "../"));}} />
+                                   {/*<input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{setUserAvatar(e.target.files[0]);}} />*/}
                                     <label for="floatingInput6">User Avatar</label>
                                 </div>
                             </div>
