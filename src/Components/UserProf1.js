@@ -77,13 +77,14 @@ const UserProf1=()=>{
         document.getElementById("floatingInput4").value="";
         document.getElementById("floatingInput6").value="";   
     }
-    const formData = new FormData();
+    
     
     async function funEditProfile()
     {
-       formData.append('',user_avatar);console.log("formData1",[...formData.entries()])
+       const formData = new FormData();
+       formData.append('',user_avatar);
+       console.log("formData1",[...formData.entries()])
        console.log("Form Data",formData);
-       const params = new URLSearchParams(formData).toString();
        setErr1("");setErr2("");setErr3("");setErr4("");
        setErr6("");setUpdateMessage("");
        //Ternary
@@ -97,7 +98,7 @@ const UserProf1=()=>{
            {
                try
                {   
-                   const res=await axios.put("http://localhost:8080/docplus.in/user/"+profileId+"?file="+ params,
+                   const res=await axios.put("http://localhost:8080/docplus.in/user/"+profileId+"?file"+ formData,
                    {
                        firstName,
                        lastName,
