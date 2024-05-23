@@ -81,10 +81,10 @@ const UserProf1=()=>{
     
     async function funEditProfile()
     {
-       const formData = new FormData();
-       formData.append('',user_avatar);
+      /* const formData = new FormData();
+       formData.append('file',user_avatar);
        console.log("formData1",[...formData.entries()])
-       console.log("Form Data",formData);
+       console.log("Form Data",formData);*/
        setErr1("");setErr2("");setErr3("");setErr4("");
        setErr6("");setUpdateMessage("");
        //Ternary
@@ -98,17 +98,14 @@ const UserProf1=()=>{
            {
                try
                {   
-                   const res=await axios.put("http://localhost:8080/docplus.in/user/"+profileId+"?file"+ formData,
+                   const res=await axios.put("http://localhost:8080/docplus.in/user/"+profileId,
                    {
                        firstName,
                        lastName,
                        userName,
                        email,
-                       role,roles,password
-                   } ,{
-                    headers: {
-                      'Content-Type': 'multipart/form-data'
-                    }},);
+                       role,roles,password,user_avatar
+                   });
                    setErr1("");setErr2("");setErr3("");setErr4("");
                    setErr6("");
                    setUpdateMessage("Updated Successfully!");
