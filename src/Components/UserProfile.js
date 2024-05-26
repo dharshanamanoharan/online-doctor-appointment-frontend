@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { GetUserId } from "../AuthService/AuthenticationService";
+import { GetUserId, getLoggedInUser } from "../AuthService/AuthenticationService";
 import axios from "axios";
 import { useEffect } from "react";
 import { funShowPassword, funShowPassword1 } from "../AuthService/ShowPassword";
 const UserProfile=()=>{
-    
+   
     const [firstName,setFirstName]=useState();
     const [lastName,setLastName]=useState();
     const [userName,setUserName]=useState();
@@ -15,7 +15,7 @@ const UserProfile=()=>{
     const [role,setRole]=useState("");
     const[roles,setRoles]=useState([]);
     const profileId=GetUserId();
-    console.log("ID",profileId);
+    //console.log("ID",profileId);
     const [profileData,setProfileData]=useState({
             firstName:"",
             lastName:"",
@@ -24,7 +24,6 @@ const UserProfile=()=>{
             user_avatar:"",
             password:"",
             displayPicture:""
-
     })
    
     
@@ -39,7 +38,7 @@ const UserProfile=()=>{
             setEmail(res.data.email);
             setUserAvatar(res.data.user_avatar);
             setDisplayPicture(res.data.displayPicture);
-            console.log(res.data.displayPicture.toString());
+           // console.log("DP",res.data);
             
         }
         catch(error)
@@ -78,10 +77,19 @@ const UserProfile=()=>{
         document.getElementById("floatingInput4").value="";
         document.getElementById("floatingInput6").value="";   
     }
-
-    const formData = new FormData();
+    
+   
     async function funEditProfile()
     {
+        const formData = new FormData();
+        formData.append('file',user_avatar);
+        formData.append('firstName',firstName);
+        formData.append('lastName',lastName);
+        formData.append('userName',userName);
+        formData.append('email',email);
+        formData.append('password',password);
+        formData.append('role',role);
+        formData.append('roles',roles);
        setErr1("");setErr2("");setErr3("");setErr4("");
        setErr6("");setUpdateMessage("");
        //Ternary
@@ -96,13 +104,12 @@ const UserProfile=()=>{
                try
                {   
                    const res=await axios.put("http://localhost:8080/docplus.in/user/"+profileId,
-                   {
-                       firstName,
-                       lastName,
-                       userName,
-                       email,
-                       user_avatar,role,roles,password
-                   });
+                   formData,
+                  {
+                    headers: {
+                      'Content-Type': 'multipart/form-data',
+                    }
+                  });
                    setErr1("");setErr2("");setErr3("");setErr4("");
                    setErr6("");
                    setUpdateMessage("Updated Successfully!");
@@ -142,14 +149,16 @@ const UserProfile=()=>{
         !pwRegEx3.test(newPassword)||!pwRegEx4.test(newPassword))?
         setErrNew("Password must be atleast 8 characters with 1 uppercase,1 lowercase,1 number and 1 symbol")
         :fl2=true;
-        const userNameOrEmail=sessionStorage.getItem("authenticatedUser");
+        const userNameOrEmail=getLoggedInUser();
+        console.log("uname",userNameOrEmail);
         if(fl1===true && fl2===true)
         {
             try{
                 const res=await axios.post("http://localhost:8080/docplus.in/auth/changePassword",{
+                    userNameOrEmail,    
                     oldPassword,
-                    newPassword,
-                    userNameOrEmail
+                    newPassword
+                    
                 })
                 //console.log(res.data);
                 setUpdateMessage("Updated Successfully!")
@@ -168,7 +177,7 @@ const UserProfile=()=>{
     return(
         <>
         <section className="container-fluid edit-my-profile-section py-5">
-            <img src={profileData.user_avatar} className="mb-4 img-fluid profile-picture"/>
+            <img src={`data:image/jpeg;base64,${profileData.displayPicture}`} className="mb-4 img-fluid profile-picture"/>
             <div className="profile-detail">
                 <p><span>User ID : </span>{profileId}</p>
                 <p><span>First Name : </span>{profileData.firstName}</p>
@@ -225,7 +234,10 @@ const UserProfile=()=>{
                             <div className='row'>
                                 <div className="form-floating">
                                    {/*<input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=(e.target.value);setUserAvatar(a.replace("C:\\fakepath\\", "../"));}} />*/}
-                                   <input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=URL.createObjectURL(e.target.files[0]);setUserAvatar(a);}} />
+                                   <input type="file"  className="form-control" id="floatingInput6" onChange={
+                                    (e)=>{
+                                        setUserAvatar(e.target.files[0]);
+                                        }} />
                                     <label for="floatingInput6">User Avatar</label>
                                 </div>
                             </div>

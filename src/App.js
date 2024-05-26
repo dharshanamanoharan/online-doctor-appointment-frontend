@@ -20,10 +20,8 @@ import AppointmentForm from './Components/AppointmentForm';
 import PaymentMessage from './Components/PaymentMessage';
 import UserProfile from './Components/UserProfile';
 import UserActivity from './Components/UserActivity';
-import UserProf1 from './Components/UserProf1';
 import Error404 from './Components/Error404';
 import { isUserLoggedIn,isAdmin } from './AuthService/AuthenticationService';
-import AdminDashboard from './Dashboard/AdminDashboard';
 import RootReducer from './Redux/RootReducer';
 import {Provider } from 'react-redux';
 import {createStore} from 'redux';
@@ -87,15 +85,13 @@ function App() {
           <Route path="/docplus.in/doctor-detail/doctor/:doctorId" element={<DoctorDetail />} />
           <Route path="/docplus.in/appointment-form/:doctorId" element={<AuthenticatedRoute><AppointmentForm /></AuthenticatedRoute>} />
           <Route path="/docplus.in/payment-message/:message" element={<AuthenticatedRoute><PaymentMessage /></AuthenticatedRoute>} />
-          <Route path="/docplus.in/my-profile" element={<AuthenticatedRoute><UserProf1 /></AuthenticatedRoute>} />
+          <Route path="/docplus.in/my-profile" element={<AuthenticatedRoute><UserProfile /></AuthenticatedRoute>} />
           <Route path="/docplus.in/my-activity" element={<AuthenticatedRoute><UserActivity /></AuthenticatedRoute>} />
-         {/* <Route path="/docplus.in/admin-panel" element={<AdminProtected><AdminDashboard /></AdminProtected>} />*/}
           <Route path="/docplus.in/admin-panel" element={<AdminProtected><AdminPanel /></AdminProtected>} />
           <Route path="/docplus.in/admin-panel/users" element={<AdminProtected><UserListTable/></AdminProtected>} />
           <Route path="/docplus.in/admin-panel/doctors" element={<AdminProtected><DoctorListTable/></AdminProtected>} />
           <Route path="/docplus.in/admin-panel/appointments" element={<AdminProtected><AppointmentListTable/></AdminProtected>} />
-          <Route path="/docplus.in/admin-panel/messages" element={<AdminProtected><MessageList/></AdminProtected>} />
-                    
+          <Route path="/docplus.in/admin-panel/messages" element={<AdminProtected><MessageList/></AdminProtected>} />     
           </Routes>
           </div>
           <Footer />
