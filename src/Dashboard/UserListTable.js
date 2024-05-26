@@ -42,6 +42,7 @@ const UserListTable=()=>{
      const [password,setPassword]=useState("");
      const [user_avatar,setUserAvatar]=useState(user[0].user_avatar);
      const [roles,setRoles]=useState(user[0].roles);
+     const [displayPicture,setDisplayPicture]=useState(user[0].displayPicture);
      useEffect(()=>{
         setFirstName(user[0].firstName);
         setLastName(user[0].lastName);
@@ -49,6 +50,7 @@ const UserListTable=()=>{
         setEmail(user[0].email);
         setUserAvatar(user[0].user_avatar);
         setRoles(user[0].roles);
+        setDisplayPicture(user[0].displayPicture)
      },[user])
      //console.log("F",userName)
      
@@ -106,7 +108,16 @@ const UserListTable=()=>{
     }
      async function funEditUser(id)
      {
-        
+        const formData = new FormData();
+        formData.append('file',user_avatar);
+        formData.append('firstName',firstName);
+        formData.append('lastName',lastName);
+        formData.append('userName',userName);
+        formData.append('email',email);
+        formData.append('password',password);
+        /*formData.append('role',role);*/
+        formData.append('roles',roles);
+        console.log("entry",...formData)
         setErr1("");setErr2("");setErr3("");setErr4("");
         setErr5("");setErr6("");setErr7("");setUpdateMessage("");
         //Ternary
@@ -121,15 +132,11 @@ const UserListTable=()=>{
             {
                 try
                 {   
-                    const res=await axios.put("http://localhost:8080/docplus.in/user/"+id,
+                    const res=await axios.put("http://localhost:8080/docplus.in/user/"+id,formData,
                     {
-                        firstName,
-                        lastName,
-                        userName,
-                        email,
-                        roles,
-                        password,
-                        user_avatar
+                        headers: {
+                          'Content-Type': 'multipart/form-data',
+                        }
                     });
                     setErr1("");setErr2("");setErr3("");setErr4("");
                     setErr5("");setErr6("");setErr7("");
@@ -295,7 +302,7 @@ const UserListTable=()=>{
                         </div>
                         <div className="modal-body view-profile">
                             <div className=" card pb-2" >
-                                    <img src={"http://localhost:3000/"+(user[0].user_avatar)} className="card-img-top img-fluid" />
+                                    <img src={`data:image/jpeg;base64,${user[0].displayPicture}`} className="card-img-top img-fluid" />
                                     <div className="card-body">
                                         <p><span>User ID : </span>{user[0].id}</p>
                                         <p><span>First Name : </span>{user[0].firstName}</p>
@@ -361,7 +368,7 @@ const UserListTable=()=>{
                             <p className="row app-err">{err5}</p>
                             <div className='row'>
                                 <div className="form-floating">
-                                    <input type="file" className="form-control" id="floatingInput6" onChange={(e)=>{var a=(e.target.value);setUserAvatar(a.replace("C:\\fakepath\\", "../"));}} />
+                                    <input type="file" className="form-control" id="floatingInput6" onChange={(e)=>{setUserAvatar(e.target.files[0])}} />
                                     <label for="floatingInput6">User Avatar</label>
                                 </div>
                             </div>

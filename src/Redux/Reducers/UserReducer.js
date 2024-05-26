@@ -7,7 +7,8 @@ const initialState=[{
     role:"",
     enabled:false,
     user_avatar:"",
-    roles:[]
+    roles:[],
+    displayPicture:""
 
 }]
 const UserReducer=(state=initialState,action)=>{
