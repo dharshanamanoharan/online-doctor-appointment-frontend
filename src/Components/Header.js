@@ -10,12 +10,13 @@ const Header=()=>{
     const admin=isAdmin();
     const userNameOrEmail=getLoggedInUser();
     const [userAvatar,setUserAvatar]=useState("../user-avatar.png");
+    const [displayPicture,setDisplayPicture]=useState();
     console.log("loggedin user",userNameOrEmail);
    const gettingLogged=async()=>{ 
     try{
         const res=await axios.post("http://localhost:8080/docplus.in/user?userNameOrEmail="+userNameOrEmail);
-        //console.log(res.data.user_avatar);
-        setUserAvatar(res.data.user_avatar);
+        console.log("get",res.data);
+        setDisplayPicture(res.data.displayPicture);
     }
     catch(error)
     {
@@ -84,7 +85,7 @@ const Header=()=>{
                     <>
                     <div className="dropdown">
                         <div className="user-avatar dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img className="user-avatar d-flex flex-row" src={userAvatar} alt="avatar" />
+                        <img className="user-avatar d-flex flex-row" src={`data:image/jpeg;base64,${displayPicture}`} alt="avatar" />
                         </div>
                         <ul class="dropdown-menu">
                             <li><Link className="dropdown-item" style={{color:((location.pathname).includes("/docplus.in/admin-panel"))?"black":"#494a80"}} to="/docplus.in/my-profile"><i class="fa-regular fa-address-card"></i>My Profile</Link></li>
@@ -151,7 +152,7 @@ const Header=()=>{
                     <>
                     <div className="mx-4 dropdown">
                         <div className="user-avatar dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img className="user-avatar d-flex flex-row" src={userAvatar} />
+                        <img className="user-avatar d-flex flex-row" src={`data:image/jpeg;base64,${displayPicture}`} />
                         </div>
                         <ul class="dropdown-menu">
                             <li><Link style={{color:((location.pathname).includes("/docplus.in/admin-panel"))?"black":"#494a80"}} className="dropdown-item" to="/docplus.in/my-profile"><i class="fa-regular fa-address-card"></i>My Profile</Link></li>

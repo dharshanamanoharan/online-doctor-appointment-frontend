@@ -38,7 +38,7 @@ const UserProf1=()=>{
             setEmail(res.data.email);
             setUserAvatar(res.data.user_avatar);
             setDisplayPicture(res.data.displayPicture);
-            console.log(res.data.displayPicture);
+            console.log("DP",res.data);
             
         }
         catch(error)
@@ -78,13 +78,18 @@ const UserProf1=()=>{
         document.getElementById("floatingInput6").value="";   
     }
     
-    
+   
     async function funEditProfile()
     {
-      /* const formData = new FormData();
-       formData.append('file',user_avatar);
-       console.log("formData1",[...formData.entries()])
-       console.log("Form Data",formData);*/
+        const formData = new FormData();
+        formData.append('file',user_avatar);
+        formData.append('firstName',firstName);
+        formData.append('lastName',lastName);
+        formData.append('userName',userName);
+        formData.append('email',email);
+        formData.append('password',password);
+        formData.append('role',role);
+        formData.append('roles',roles);
        setErr1("");setErr2("");setErr3("");setErr4("");
        setErr6("");setUpdateMessage("");
        //Ternary
@@ -99,13 +104,12 @@ const UserProf1=()=>{
                try
                {   
                    const res=await axios.put("http://localhost:8080/docplus.in/user/"+profileId,
-                   {
-                       firstName,
-                       lastName,
-                       userName,
-                       email,
-                       role,roles,password,user_avatar
-                   });
+                   formData,
+                  {
+                    headers: {
+                      'Content-Type': 'multipart/form-data',
+                    }
+                  });
                    setErr1("");setErr2("");setErr3("");setErr4("");
                    setErr6("");
                    setUpdateMessage("Updated Successfully!");
@@ -171,7 +175,7 @@ const UserProf1=()=>{
     return(
         <>
         <section className="container-fluid edit-my-profile-section py-5">
-            <img src={profileData.user_avatar} className="mb-4 img-fluid profile-picture"/>
+            <img src={`data:image/jpeg;base64,${profileData.displayPicture}`} className="mb-4 img-fluid profile-picture"/>
             <div className="profile-detail">
                 <p><span>User ID : </span>{profileId}</p>
                 <p><span>First Name : </span>{profileData.firstName}</p>
@@ -227,8 +231,11 @@ const UserProf1=()=>{
                             <p className="row app-err">{err4}</p>
                             <div className='row'>
                                 <div className="form-floating">
-                                   <input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=(e.target.value);setUserAvatar(a.replace("C:\\fakepath\\", "../"));}} />
-                                   {/*<input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{setUserAvatar(e.target.files[0]);}} />*/}
+                                   {/*<input type="file"  className="form-control" id="floatingInput6" onChange={(e)=>{var a=(e.target.value);setUserAvatar(a.replace("C:\\fakepath\\", "../"));}} />*/}
+                                   <input type="file"  className="form-control" id="floatingInput6" onChange={
+                                    (e)=>{
+                                        setUserAvatar(e.target.files[0]);
+                                        }} />
                                     <label for="floatingInput6">User Avatar</label>
                                 </div>
                             </div>
