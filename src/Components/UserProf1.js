@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GetUserId } from "../AuthService/AuthenticationService";
+import { GetUserId, getLoggedInUser } from "../AuthService/AuthenticationService";
 import axios from "axios";
 import { useEffect } from "react";
 import { funShowPassword, funShowPassword1 } from "../AuthService/ShowPassword";
@@ -149,14 +149,16 @@ const UserProf1=()=>{
         !pwRegEx3.test(newPassword)||!pwRegEx4.test(newPassword))?
         setErrNew("Password must be atleast 8 characters with 1 uppercase,1 lowercase,1 number and 1 symbol")
         :fl2=true;
-        const userNameOrEmail=sessionStorage.getItem("authenticatedUser");
+        const userNameOrEmail=getLoggedInUser();
+        console.log("uname",userNameOrEmail);
         if(fl1===true && fl2===true)
         {
             try{
                 const res=await axios.post("http://localhost:8080/docplus.in/auth/changePassword",{
+                    userNameOrEmail,    
                     oldPassword,
-                    newPassword,
-                    userNameOrEmail
+                    newPassword
+                    
                 })
                 //console.log(res.data);
                 setUpdateMessage("Updated Successfully!")
