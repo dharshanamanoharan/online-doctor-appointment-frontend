@@ -15,7 +15,7 @@ const UserProf1=()=>{
     const [role,setRole]=useState("");
     const[roles,setRoles]=useState([]);
     const profileId=GetUserId();
-    console.log("ID",profileId);
+    //console.log("ID",profileId);
     const [profileData,setProfileData]=useState({
             firstName:"",
             lastName:"",
@@ -38,7 +38,7 @@ const UserProf1=()=>{
             setEmail(res.data.email);
             setUserAvatar(res.data.user_avatar);
             setDisplayPicture(res.data.displayPicture);
-            console.log("DP",res.data);
+           // console.log("DP",res.data);
             
         }
         catch(error)

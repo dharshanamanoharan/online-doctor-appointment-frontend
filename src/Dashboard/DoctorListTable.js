@@ -297,7 +297,7 @@ const DoctorListTable=()=>{
         (availability.trim()==="")?setErr10("Please select the availability"):f10=true;
         (fees===""||fees<=0)?setErr12("Please enter the fee"):f12=true;
         (image.trim()==="" )?setErr11("Please upload a picture"):f11=true;
-       console.log(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12);
+       //console.log(f1,f2,f3,f4,f5,f6,f7,f8,f9,f10,f11,f12);
         if(f1===true && f2===true && f3===true && f4===true && f5===true && f6===true && 
            f7===true  && f8===true && f9===true && f10===true && f11===true && (f12===true))
         {

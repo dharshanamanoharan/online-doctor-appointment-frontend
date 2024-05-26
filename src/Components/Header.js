@@ -11,11 +11,11 @@ const Header=()=>{
     const userNameOrEmail=getLoggedInUser();
     const [userAvatar,setUserAvatar]=useState("../user-avatar.png");
     const [displayPicture,setDisplayPicture]=useState();
-    console.log("loggedin user",userNameOrEmail);
+    //console.log("loggedin user",userNameOrEmail);
    const gettingLogged=async()=>{ 
     try{
         const res=await axios.post("http://localhost:8080/docplus.in/user?userNameOrEmail="+userNameOrEmail);
-        console.log("get",res.data);
+        //console.log("get",res.data);
         setDisplayPicture(res.data.displayPicture);
     }
     catch(error)
@@ -25,8 +25,8 @@ const Header=()=>{
 }
     gettingLogged();
     const role=localStorage.getItem("role");
-    console.log("auth",role)
-    console.log("isAdmin in Header",admin);
+    //console.log("auth",role)
+    //console.log("isAdmin in Header",admin);
     //console.log("Is logged in?",isAuth);
     const handleLogout=()=>{
         window.location.reload(true);

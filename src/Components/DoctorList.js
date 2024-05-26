@@ -129,7 +129,7 @@ const DoctorList = () => {
         var filteredDataByLocation=[];
         for(var i=0;i<locationFilter.length;i++)
         {
-            console.log("Inside loop",filteredDataByLocation)
+            //console.log("Inside loop",filteredDataByLocation)
             filteredDataByLocation.push(
                 filtered.filter((doctor)=>{
                 return(

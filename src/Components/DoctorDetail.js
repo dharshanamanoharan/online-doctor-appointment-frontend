@@ -26,7 +26,7 @@ const DoctorDetail=()=>{
     useEffect(()=>{
         getDoctor();
     },[])
-    console.log("Doctor Detail Page",doctorInfo);
+    //console.log("Doctor Detail Page",doctorInfo);
 
     //Booking Slot
     const [bookDate,setBookDate]=useState();

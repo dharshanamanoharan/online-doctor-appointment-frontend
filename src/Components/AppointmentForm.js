@@ -111,9 +111,9 @@ const AppointmentForm=()=>{
       try{
           const res1=await axios.get("http://localhost:8080/docplus.in/payment/"+doctor.fees*100);
           sessionStorage.setItem("orderID",res1.data);
-          console.log("Order ID from backend",res1.data);
-          console.log("from session in try block", sessionStorage.getItem("orderID"));
-          console.log("Order ID stored from backend",sessionStorage.getItem("orderID"));
+          //console.log("Order ID from backend",res1.data);
+          //console.log("from session in try block", sessionStorage.getItem("orderID"));
+          //console.log("Order ID stored from backend",sessionStorage.getItem("orderID"));
           navigator(`/docplus.in/payment-message/${"success"}`);
         }
       catch(error)

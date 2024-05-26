@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 const VerificationMessage=()=>{
     const token=useParams();
-    console.log("Verification token:",token.token)
+    //console.log("Verification token:",token.token)
     const [message,setMessage]=useState("");
     const verifyUser=async()=>{
     try{

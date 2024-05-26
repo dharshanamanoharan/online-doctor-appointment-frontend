@@ -38,7 +38,7 @@ const handleLogin=async(e)=>{
     localStorage.setItem("role",res.data.role);
     (isAdmin())?navigator("/docplus.in/admin-panel"):navigator("/");
     window.location.reload(true);
-    console.log(userId);
+    //console.log(userId);
   }
   catch(error)
   {

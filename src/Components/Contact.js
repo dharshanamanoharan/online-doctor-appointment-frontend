@@ -40,7 +40,7 @@ const Contact=()=>{
                     senderMessage,
                     msgTimeStamp
                 })
-                console.log(res.data);
+                //console.log(res.data);
                 setDocplusMessgae({
                     senderName:senderName,
                     senderEmail:senderEmail,
