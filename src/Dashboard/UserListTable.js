@@ -108,9 +108,8 @@ const UserListTable=()=>{
     }
      async function funEditUser(id)
      {
-  
         const formData = new FormData();
-        formData.append('file',displayPicture);
+        //formData.append('file',displayPicture);
         formData.append('firstName',firstName);
         formData.append('lastName',lastName);
         formData.append('userName',userName);
