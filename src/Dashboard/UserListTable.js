@@ -108,6 +108,21 @@ const UserListTable=()=>{
     }
      async function funEditUser(id)
      {
+        // Function to convert base64 to blob
+function base64ToBlob(displayPicture) {
+    const byteString = atob(displayPicture.split(',')[1]);
+    const mimeString = displayPicture.split(',')[0].split(':')[1].split(';')[0];
+    const arrayBuffer = new ArrayBuffer(byteString.length);
+    const byteArray = new Uint8Array(arrayBuffer);
+    for (let i = 0; i < byteString.length; i++) {
+      byteArray[i] = byteString.charCodeAt(i);
+    }
+    return new Blob([arrayBuffer], { type: mimeString });
+  }
+  
+  // Convert base64 string to blob
+  const blob = base64ToBlob(base64String);
+  
         const formData = new FormData();
         formData.append('file',null);
         formData.append('firstName',firstName);
