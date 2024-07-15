@@ -67,7 +67,7 @@ const Footer = () => {
     setQuote(quotes[i].quote);
     setImage(quotes[i].image);
   }
- setInterval(funFact,10000);
+ setInterval(setTimeout(funFact,10000),10000);
  
   return (
     <>
